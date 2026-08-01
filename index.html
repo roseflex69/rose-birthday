@@ -1,0 +1,2987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Happy Birthday Rose 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&family=Great+Vibes&family=IM+Fell+English:ital@0;1&family=Creepster&family=Noto+Serif+Devanagari:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --maroon:#5C1A1A; --maroon-deep:#3D0A0A; --dark-brown:#2C1810;
+  --gold:#C9A55A; --gold-light:#E8D5A3; --butter:#F5E6A3;
+  --cream:#FBF6EE; --pastel-pink:#F7D6D0; --pastel-peach:#FDEBD0;
+  --emerald:#2D5A3D; --warm-white:#FFFDF8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Jost',sans-serif;
+  background:var(--cream);
+  color:var(--dark-brown);
+  max-width:430px;
+  margin:0 auto;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+.bnav{
+  position:fixed;bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;
+  background:var(--warm-white);
+  border-top:1px solid rgba(201,165,90,.2);
+  display:flex;padding:10px 0 env(safe-area-inset-bottom,10px);
+  z-index:100;box-shadow:0 -4px 24px rgba(92,26,26,.08);
+}
+.btab{
+  flex:1;display:flex;flex-direction:column;
+  align-items:center;gap:3px;cursor:pointer;padding:4px 0;
+}
+.btab svg{width:21px;height:21px;stroke:var(--gold-light);fill:none;stroke-width:1.8;transition:stroke .2s;}
+.btab span{font-size:9px;color:#B8A090;font-weight:400;letter-spacing:.5px;transition:color .2s;}
+.btab.active svg{stroke:var(--maroon);}
+.btab.active span{color:var(--maroon);font-weight:600;}
+.btab-dot{width:4px;height:4px;border-radius:50%;background:var(--maroon);opacity:0;margin-top:1px;}
+.btab.active .btab-dot{opacity:1;}
+.page{display:none;padding-bottom:90px;min-height:100vh;}
+.page.active{display:block;}
+.home-hero{
+  min-height:92vh;background:var(--maroon-deep);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  position:relative;overflow:hidden;padding:60px 28px;
+}
+.home-hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 10%,rgba(92,26,26,.9) 0%,transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 90%,rgba(45,90,61,.2) 0%,transparent 60%);
+}
+.home-fall-emoji{position:absolute;top:0;font-size:14px;opacity:0;pointer-events:none;animation:emojiFall linear infinite;}
+@keyframes emojiFall{
+  0%{opacity:0;transform:translateY(-40px) rotate(0deg);}
+  10%{opacity:.85;}
+  55%{opacity:.6;}
+  100%{opacity:0;transform:translateY(88vh) rotate(360deg);}
+}
+.home-tag{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:rgba(201,165,90,.7);margin-bottom:16px;position:relative;z-index:1;text-align:center;animation:heartbeatGlow 4.5s ease-in-out infinite;}
+.home-name{font-family:'Great Vibes',cursive;font-size:82px;color:var(--butter);line-height:1;text-align:center;position:relative;z-index:1;margin-bottom:8px;animation:heartbeatGlow 4.5s ease-in-out infinite;}
+.home-tagline{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;font-weight:300;color:rgba(255,255,255,.6);letter-spacing:2px;text-align:center;position:relative;z-index:1;margin-bottom:36px;}
+.home-cards{display:flex;gap:12px;position:relative;z-index:1;}
+.home-pill{background:rgba(255,255,255,.07);border:1px solid rgba(201,165,90,.25);backdrop-filter:blur(8px);border-radius:50px;padding:10px 18px;font-size:12px;color:rgba(255,255,255,.7);font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:.5px;}
+.home-scroll-hint{position:absolute;bottom:28px;display:flex;flex-direction:column;align-items:center;gap:5px;z-index:1;}
+.home-scroll-hint span{font-size:9px;letter-spacing:3px;color:rgba(255,255,255,.3);text-transform:uppercase;}
+.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,rgba(201,165,90,.7),transparent);animation:pulse 1.5s ease infinite;}
+@keyframes pulse{0%,100%{opacity:.3;}50%{opacity:1;}}
+.quote-band{background:var(--pastel-peach);padding:28px;text-align:center;border-top:1px solid rgba(201,165,90,.15);border-bottom:1px solid rgba(201,165,90,.15);}
+.quote-band p{font-family:'IM Fell English',serif;font-style:italic;font-size:17px;line-height:1.8;color:var(--dark-brown);margin-bottom:18px;}
+.quote-band p:last-of-type{margin-bottom:0;}
+.quote-band cite{display:block;margin-top:10px;font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-style:normal;font-family:'Jost',sans-serif;}
+.mem-header{padding:40px 24px 20px;}
+.page-label{font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:flex;align-items:center;gap:10px;}
+.page-label::after{content:'';flex:1;height:1px;background:linear-gradient(to right,var(--gold-light),transparent);}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;line-height:1.2;}
+.page-title em{font-style:italic;color:var(--maroon);}
+.page-sub{font-size:13px;font-weight:300;color:#7A5C50;margin-top:6px;line-height:1.7;}
+.mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px 20px;}
+.mem-card{border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:transform .25s;box-shadow:0 4px 16px rgba(0,0,0,.1);}
+.mem-card:hover{transform:scale(1.03);}
+.mem-card.tall{grid-row:span 2;}
+.mem-img{width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:52px;position:relative;}
+.mem-card.tall .mem-img{aspect-ratio:.65;}
+.mem-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,24,16,.85) 0%,transparent 50%);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;}
+.mem-card:hover .mem-overlay{opacity:1;}
+.mem-caption{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:white;font-weight:400;}
+.mem-date{font-size:10px;color:var(--gold-light);letter-spacing:1px;margin-top:3px;}
+.mem-add-note{margin:8px 16px 24px;background:var(--warm-white);border:1px dashed rgba(201,165,90,.4);border-radius:16px;padding:18px;text-align:center;}
+.mem-add-note span{font-size:13px;color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;}
+.letter-wrap{padding:20px 20px 10px;}
+.letter-card{background:var(--warm-white);border-radius:20px;padding:28px 24px;box-shadow:0 4px 24px rgba(92,26,26,.08);border:1px solid rgba(201,165,90,.15);margin-bottom:16px;position:relative;overflow:hidden;}
+.letter-card::before{content:'"';position:absolute;top:-10px;left:16px;font-family:'Cormorant Garamond',serif;font-size:100px;color:rgba(92,26,26,.05);line-height:1;}
+.letter-seal{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--maroon),var(--maroon-deep));display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:16px;box-shadow:0 3px 12px rgba(92,26,26,.3);}
+.letter-to{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.letter-salute{font-family:'Great Vibes',cursive;font-size:32px;color:var(--maroon);margin-bottom:14px;}
+.letter-body{font-family:'IM Fell English',serif;font-size:15px;line-height:2;color:#4A3030;font-style:italic;}
+.letter-sign{font-family:'Great Vibes',cursive;font-size:28px;color:var(--maroon);margin-top:20px;text-align:right;}
+.letter-date{font-size:10px;letter-spacing:2px;color:#B09080;text-align:right;margin-top:4px;}
+.letter2-card{background:linear-gradient(135deg,#2C1810,#1A0808);border-radius:20px;padding:28px 24px;margin-bottom:16px;box-shadow:0 4px 24px rgba(0,0,0,.2);}
+.env-cover{background:linear-gradient(160deg,#F3E2C0,#EAD3A3);border-radius:14px;padding:60px 24px;margin-bottom:16px;position:relative;overflow:hidden;text-align:center;cursor:pointer;box-shadow:0 8px 28px rgba(92,26,26,.18);border:1px solid rgba(92,26,26,.12);transition:transform .25s,opacity .5s;}
+.env-cover:active{transform:scale(.98);}
+.env-cover::before{content:'';position:absolute;top:0;left:0;right:0;height:0;border-left:190px solid transparent;border-right:190px solid transparent;border-top:110px solid rgba(92,26,26,.07);}
+.env-seal{width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#7A2424,var(--maroon-deep));display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px;box-shadow:0 4px 14px rgba(92,26,26,.4), inset 0 -3px 6px rgba(0,0,0,.25);position:relative;z-index:2;}
+.env-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--maroon);font-family:'Cormorant Garamond',serif;position:relative;z-index:2;}
+.env-hint{margin-top:6px;font-size:12px;font-style:italic;color:#9A7A70;font-family:'Cormorant Garamond',serif;position:relative;z-index:2;}
+.lock-modal{position:fixed;inset:0;z-index:10001;display:flex;align-items:center;justify-content:center;background:rgba(20,8,10,.75);opacity:0;pointer-events:none;transition:opacity .3s;padding:20px;}
+.lock-modal.show{opacity:1;pointer-events:auto;}
+.lock-box{background:var(--warm-white);border-radius:20px;padding:32px 24px;max-width:320px;width:100%;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.35);transform:scale(.9);transition:transform .3s;}
+.lock-modal.show .lock-box{transform:scale(1);}
+.lock-icon{font-size:30px;margin-bottom:8px;}
+.lock-title{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--maroon);margin-bottom:4px;font-weight:600;}
+.lock-sub{font-size:12px;color:#9A7A70;margin-bottom:18px;font-style:italic;}
+.lock-input{width:100%;box-sizing:border-box;padding:12px 16px;border-radius:12px;border:1px solid rgba(201,165,90,.35);background:#fff;font-size:16px;text-align:center;letter-spacing:4px;margin-bottom:12px;color:var(--maroon-deep);}
+.lock-input.shake{animation:lockShake .4s;}
+@keyframes lockShake{0%,100%{transform:translateX(0);}25%{transform:translateX(-8px);}75%{transform:translateX(8px);}}
+.lock-btn{width:100%;padding:12px;border-radius:12px;background:var(--maroon);color:#fff;font-size:13px;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;font-family:'Jost',sans-serif;}
+.lock-close{margin-top:12px;font-size:11px;color:#B09080;cursor:pointer;letter-spacing:1px;}
+.lock-error{font-size:11px;color:#B03030;margin-top:-4px;margin-bottom:10px;display:none;}
+.lock-error.show{display:block;}
+@keyframes letterUnfold{0%{opacity:0;transform:translateY(10px);}100%{opacity:1;transform:translateY(0);}}
+.music-wrap{padding:20px 20px 0;}
+.player-card{background:linear-gradient(145deg,var(--maroon-deep),#2A0808);border-radius:24px;padding:28px 24px;box-shadow:0 8px 32px rgba(92,26,26,.3);margin-bottom:20px;position:relative;overflow:hidden;}
+.player-card::before{content:'♪';position:absolute;right:20px;top:10px;font-size:100px;color:rgba(255,255,255,.03);}
+.player-disc-wrap{display:flex;justify-content:center;align-items:center;gap:22px;margin-bottom:24px;}
+.player-disc{width:140px;height:140px;border-radius:50%;position:relative;flex-shrink:0;
+  background:
+    repeating-radial-gradient(circle at center,#1a1a1a 0px,#1a1a1a 2px,#232323 2px,#232323 4px),
+    radial-gradient(circle at 38% 32%,rgba(255,255,255,.14),transparent 45%);
+  box-shadow:0 0 30px rgba(0,0,0,.5),inset 0 0 18px rgba(0,0,0,.6);
+  border:2px solid rgba(201,165,90,.25);}
+.player-disc.spinning{animation:spin 4s linear infinite;}
+@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.disc-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;
+  background:radial-gradient(circle at 38% 32%,var(--maroon),var(--maroon-deep));
+  border:2px solid rgba(201,165,90,.5);display:flex;align-items:center;justify-content:center;
+  font-size:22px;box-shadow:0 0 10px rgba(0,0,0,.4);}
+.disc-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;
+  background:#0a0a0a;border:1px solid rgba(201,165,90,.5);z-index:2;}
+.disc-shine{position:absolute;top:8%;left:14%;width:32%;height:20%;border-radius:50%;
+  background:linear-gradient(135deg,rgba(255,255,255,.22),transparent 70%);transform:rotate(-30deg);pointer-events:none;}
+.player-eq{display:flex;align-items:flex-end;gap:4px;height:44px;}
+.player-eq .eq-bar{width:5px;background:linear-gradient(180deg,var(--gold-light),var(--gold));border-radius:3px;height:20%;
+  transition:height .15s ease;}
+.player-eq.playing .eq-bar{animation:eqBounce 1s ease-in-out infinite;}
+.player-eq .eq-bar:nth-child(1){animation-delay:0s;}
+.player-eq .eq-bar:nth-child(2){animation-delay:.15s;}
+.player-eq .eq-bar:nth-child(3){animation-delay:.3s;}
+.player-eq .eq-bar:nth-child(4){animation-delay:.45s;}
+.player-eq .eq-bar:nth-child(5){animation-delay:.2s;}
+@keyframes eqBounce{
+  0%,100%{height:20%;}
+  25%{height:80%;}
+  50%{height:35%;}
+  75%{height:100%;}
+}
+.player-song{text-align:center;margin-bottom:20px;}
+.player-song-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--butter);margin-bottom:4px;}
+.player-artist{font-size:12px;color:rgba(255,255,255,.5);letter-spacing:2px;}
+.player-bar-wrap{margin-bottom:20px;}
+.player-bar{width:100%;height:3px;border-radius:50px;background:rgba(255,255,255,.15);overflow:hidden;cursor:pointer;}
+.player-fill{height:100%;border-radius:50px;background:linear-gradient(to right,var(--maroon),var(--gold));width:0%;transition:width .1s linear;}
+.player-times{display:flex;justify-content:space-between;font-size:10px;color:rgba(255,255,255,.4);margin-top:6px;}
+.player-controls{display:flex;align-items:center;justify-content:center;gap:24px;}
+.ctrl-btn{background:none;border:none;cursor:pointer;padding:6px;transition:transform .2s;}
+.ctrl-btn:active{transform:scale(.88);}
+.ctrl-btn svg{width:22px;height:22px;stroke:rgba(255,255,255,.5);fill:none;stroke-width:2;}
+.play-btn{width:56px;height:56px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--maroon),var(--gold));display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(92,26,26,.5);transition:transform .2s;}
+.play-btn:active{transform:scale(.93);}
+.play-btn svg{width:22px;height:22px;stroke:white;fill:white;stroke-width:2;margin-left:3px;}
+.song-list{margin-top:4px;}
+.song-item{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;cursor:pointer;transition:background .2s;border-bottom:1px solid rgba(201,165,90,.08);}
+.song-item:hover{background:rgba(201,165,90,.06);}
+.song-item.playing{background:rgba(92,26,26,.08);}
+.song-num{font-size:12px;color:var(--gold);width:18px;text-align:center;font-family:'Cormorant Garamond',serif;}
+.song-info{flex:1;}
+.song-name{font-size:14px;font-weight:500;color:var(--dark-brown);}
+.song-art{font-size:11px;color:#9A7A70;margin-top:2px;}
+.song-dur{font-size:11px;color:#B09080;}
+.reasons-wrap{padding:20px 20px 0;}
+.reason-card{background:var(--warm-white);border-radius:18px;padding:22px;margin-bottom:12px;box-shadow:0 2px 16px rgba(92,26,26,.06);border-left:3px solid var(--maroon);display:flex;gap:16px;align-items:flex-start;transition:transform .2s,box-shadow .2s;}
+.reason-card:hover{transform:translateX(4px);box-shadow:0 4px 24px rgba(92,26,26,.1);}
+.reason-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--maroon);opacity:.25;line-height:1;flex-shrink:0;width:32px;}
+.reason-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:var(--dark-brown);margin-bottom:4px;}
+.reason-desc{font-size:13px;font-weight:300;color:#7A5C50;line-height:1.7;}
+.reasons-footer{margin:24px 20px;background:linear-gradient(135deg,var(--maroon),var(--maroon-deep));border-radius:20px;padding:28px 24px;text-align:center;}
+.reasons-footer-title{font-family:'Great Vibes',cursive;font-size:44px;color:var(--butter);margin-bottom:8px;}
+.reasons-footer-sub{font-size:12px;font-weight:300;color:rgba(255,255,255,.6);letter-spacing:1px;line-height:1.8;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.fheart{position:fixed;pointer-events:none;font-size:20px;z-index:9999;animation:floatUp 2s ease forwards;}
+@keyframes floatUp{0%{opacity:1;transform:translateY(0) scale(1);}100%{opacity:0;transform:translateY(-200px) scale(1.4);}}
+
+/* Birthday page */
+.bday-hero{min-height:60vh;background:var(--maroon-deep);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:56px 24px 40px;}
+.bday-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(92,26,26,.9) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 20% 100%,rgba(201,165,90,.18) 0%,transparent 60%);}
+.bday-stars{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.bday-star{position:absolute;width:3px;height:3px;border-radius:50%;background:#F5E6A3;box-shadow:0 0 6px 1px rgba(245,230,163,.8);opacity:0;animation-name:starTwinkle;animation-timing-function:ease-in-out;animation-iteration-count:infinite;}
+@keyframes starTwinkle{0%,100%{opacity:0;transform:scale(.5);}50%{opacity:1;transform:scale(1.3);}}
+@keyframes heartbeatGlow{
+  0%,100%{text-shadow:0 0 8px rgba(245,230,163,.25),0 0 16px rgba(245,230,163,.12);}
+  50%{text-shadow:0 0 18px rgba(245,230,163,.55),0 0 28px rgba(245,230,163,.28);}
+}
+.bday-tag{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:rgba(201,165,90,.75);margin-bottom:14px;position:relative;z-index:1;animation:heartbeatGlow 4.5s ease-in-out infinite;}
+.bday-title{font-family:'Great Vibes',cursive;font-size:clamp(38px,11vw,56px);color:var(--butter);text-align:center;line-height:1.15;position:relative;z-index:1;margin-bottom:16px;padding:0 10px;animation:heartbeatGlow 4.5s ease-in-out infinite;}
+.bday-date{font-size:12px;letter-spacing:3px;color:rgba(255,255,255,.5);text-transform:uppercase;position:relative;z-index:1;margin-bottom:28px;}
+.countdown-row{display:flex;gap:10px;position:relative;z-index:1;}
+.cd-box{background:rgba(255,255,255,.07);border:1px solid rgba(201,165,90,.3);border-radius:16px;padding:14px 12px;min-width:62px;text-align:center;backdrop-filter:blur(6px);}
+.cd-num{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--butter);line-height:1;}
+.cd-lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:6px;}
+.cd-done{font-family:'Great Vibes',cursive;font-size:34px;color:var(--butter);position:relative;z-index:1;text-align:center;}
+.age-band{background:var(--pastel-peach);padding:22px 24px;text-align:center;border-top:1px solid rgba(201,165,90,.15);border-bottom:1px solid rgba(201,165,90,.15);}
+.age-band .age-num{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:var(--maroon);}
+.age-band .age-sub{font-size:12px;color:#7A5C50;letter-spacing:1px;margin-top:4px;}
+.cake-wrap{padding:36px 24px 10px;text-align:center;}
+.cake-hint{font-size:12px;color:#9A7A70;letter-spacing:1px;margin-bottom:22px;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.mic-blow-wrap{text-align:center;margin:-10px 0 22px;}
+.mic-btn{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:1px;color:var(--maroon);
+  background:var(--warm-white);border:1px solid rgba(201,165,90,.4);border-radius:20px;padding:8px 16px;cursor:pointer;}
+.mic-btn:disabled{opacity:.55;cursor:default;}
+.mic-btn.listening{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:var(--maroon-deep);
+  border-color:transparent;animation:micPulse 1.4s ease-in-out infinite;}
+@keyframes micPulse{0%,100%{box-shadow:0 0 0 0 rgba(201,165,90,.5);}50%{box-shadow:0 0 0 8px rgba(201,165,90,0);}}
+.cake{position:relative;display:inline-block;margin:0 auto;padding-bottom:20px;}
+.cake-candles{display:flex;justify-content:center;gap:14px;margin-bottom:-4px;position:relative;z-index:3;}
+.candle{width:8px;height:26px;background:linear-gradient(to bottom,var(--gold-light),var(--gold));border-radius:3px;position:relative;cursor:pointer;transition:opacity .3s;}
+.candle .flame{position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-size:16px;animation:flicker 1s ease infinite alternate;transition:opacity .3s;}
+@keyframes flicker{0%{transform:translateX(-50%) scale(1) rotate(-2deg);}100%{transform:translateX(-50%) scale(1.1) rotate(2deg);}}
+.candle.blown .flame{opacity:0;}
+.candle.blown::after{content:'';position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:3px;height:8px;background:rgba(200,200,200,.5);border-radius:2px;filter:blur(1px);}
+.cake-plate{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:230px;height:28px;border-radius:50%;
+  background:radial-gradient(ellipse at 35% 30%,#FFFDF8,#EAD9C4 70%,#D8C2A0);
+  box-shadow:0 8px 18px rgba(92,26,26,.22), inset 0 2px 4px rgba(255,255,255,.7), inset 0 -3px 6px rgba(120,80,40,.2);z-index:0;}
+.cake-shadow{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:170px;height:16px;border-radius:50%;
+  background:radial-gradient(ellipse at center, rgba(92,26,26,.25), transparent 70%);filter:blur(2px);z-index:0;}
+.cake-tier{background:linear-gradient(145deg,#FDEBD0,#EAD3A3);border-radius:10px 10px 4px 4px;box-shadow:0 4px 16px rgba(92,26,26,.18);position:relative;z-index:1;overflow:hidden;}
+.cake-tier::before{content:'';position:absolute;inset:0;opacity:.55;
+  background-image:radial-gradient(circle at 15% 25%, rgba(255,255,255,.65) 0 2.5px, transparent 3px),
+    radial-gradient(circle at 40% 60%, rgba(255,255,255,.55) 0 2.5px, transparent 3px),
+    radial-gradient(circle at 65% 30%, rgba(255,255,255,.6) 0 2.5px, transparent 3px),
+    radial-gradient(circle at 85% 65%, rgba(255,255,255,.5) 0 2.5px, transparent 3px),
+    radial-gradient(circle at 28% 85%, rgba(255,255,255,.5) 0 2.5px, transparent 3px);
+  background-size:26px 26px;}
+.cake-tier.top{width:150px;height:46px;margin:0 auto;}
+.cake-tier.bottom{width:190px;height:56px;margin:4px auto 0;background:linear-gradient(145deg,var(--maroon),var(--maroon-deep));}
+.cake-tier.bottom::before{opacity:.2;}
+.cake-drip{position:absolute;top:-2px;left:0;right:0;height:14px;z-index:1;
+  background:
+    radial-gradient(circle at 8% 60%, var(--gold) 0 5px, transparent 6px),
+    radial-gradient(circle at 22% 40%, var(--gold) 0 6px, transparent 7px),
+    radial-gradient(circle at 38% 65%, var(--gold) 0 4px, transparent 5px),
+    radial-gradient(circle at 55% 45%, var(--gold) 0 6px, transparent 7px),
+    radial-gradient(circle at 72% 60%, var(--gold) 0 5px, transparent 6px),
+    radial-gradient(circle at 88% 42%, var(--gold) 0 6px, transparent 7px),
+    linear-gradient(180deg,var(--gold),transparent);
+  opacity:.85;}
+.cake-msg{margin-top:24px;font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--maroon);opacity:0;transition:opacity .6s ease;min-height:28px;}
+.cake-msg.show{opacity:1;}
+.bday-wish-card{margin:28px 20px;background:var(--warm-white);border-radius:20px;padding:26px 24px;box-shadow:0 4px 24px rgba(92,26,26,.08);border:1px solid rgba(201,165,90,.15);}
+.bday-wish-title{font-family:'Great Vibes',cursive;font-size:30px;color:var(--maroon);margin-bottom:12px;text-align:center;}
+.bday-wish-body{font-family:'IM Fell English',serif;font-size:15px;line-height:1.9;color:#4A3030;font-style:italic;text-align:center;}
+.bday-video-card{margin:24px 20px 30px;background:var(--warm-white);border-radius:20px;padding:22px 20px 26px;
+  box-shadow:0 4px 24px rgba(92,26,26,.1);border:1px solid rgba(201,165,90,.2);}
+.bday-video-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#B08968;text-align:center;margin-bottom:6px;}
+.bday-video-title{font-family:'Great Vibes',cursive;font-size:28px;color:var(--maroon);text-align:center;margin-bottom:16px;}
+.bday-video-wrap{position:relative;width:100%;border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(92,26,26,.18);background:#000;}
+.bday-video-wrap video{display:block;width:100%;}
+.bday-video-caption{text-align:center;font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:#9A7A70;margin-top:12px;}
+.home-video-section{margin-top:12px;background:var(--warm-white);border-radius:20px;padding:20px 18px;box-shadow:0 4px 20px rgba(92,26,26,.1);border:1px solid rgba(201,165,90,.2);}
+.home-video-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#B08968;text-align:center;margin-bottom:4px;}
+.home-video-title{font-family:'Great Vibes',cursive;font-size:26px;color:var(--maroon);text-align:center;margin-bottom:16px;}
+.home-video-item{margin-bottom:16px;}
+.home-video-item:last-child{margin-bottom:0;}
+.home-video-item video{display:block;width:100%;border-radius:12px;box-shadow:0 4px 16px rgba(92,26,26,.15);background:#000;}
+.home-video-caption{text-align:center;font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:#9A7A70;margin-top:8px;}
+.home-photo-card{margin-top:12px;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.25);}
+.home-photo-card img{display:block;width:100%;max-height:520px;object-fit:cover;}
+.confetti{position:fixed;pointer-events:none;font-size:18px;z-index:9999;animation:confettiFall 2.4s ease-in forwards;}
+@keyframes confettiFall{0%{opacity:1;transform:translateY(-20px) rotate(0deg);}100%{opacity:0;transform:translateY(70vh) rotate(560deg);}}
+
+/* ===== Photo-ready home cards =====
+   To add a photo behind any card, paste a URL (or a base64 data:image/jpeg;base64,... string)
+   inside that card's url('') below — keep the linear-gradient before the comma, it's the dark
+   scrim that keeps the text readable over any photo. */
+.pcard{position:relative;overflow:hidden;border-radius:20px;padding:22px 18px;cursor:pointer;
+  transition:transform .2s;background-size:cover;background-position:center;}
+.pcard:active{transform:scale(.98);}
+.pcard-content{position:relative;z-index:1;}
+.pcard-birthday{
+  background-image:linear-gradient(135deg,rgba(201,165,90,.55),rgba(92,26,26,.75)), url('');
+  background-color:var(--gold); box-shadow:0 4px 20px rgba(92,26,26,.25); margin-bottom:12px;
+}
+.pcard-memories{
+  background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.5)), url('');
+  background-color:#F7D6D0; box-shadow:0 2px 16px rgba(92,26,26,.08);
+}
+.pcard-letters{
+  background-image:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.6)), url('');
+  background-color:#2C1810; box-shadow:0 2px 16px rgba(0,0,0,.15);
+}
+.pcard-songs{
+  background-image:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.6)), url('');
+  background-color:var(--maroon); box-shadow:0 2px 16px rgba(92,26,26,.2);
+}
+.pcard-whyyou{
+  background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.5)), url('');
+  background-color:#EDD9B2; box-shadow:0 2px 16px rgba(201,165,90,.15);
+}
+
+/* Happy Birthday Baby reveal - festive version */
+.hb-overlay{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 35%,rgba(255,214,102,.28),rgba(255,105,180,.2) 45%,rgba(30,12,20,.72) 85%);
+  pointer-events:none;opacity:0;transition:opacity .7s ease;overflow:hidden;}
+.hb-overlay.show{opacity:1;}
+.hb-text{font-family:'Cormorant Garamond',serif;font-weight:800;font-size:clamp(32px,11vw,58px);
+  letter-spacing:3px;text-align:center;line-height:1.3;position:relative;z-index:2;
+  background:linear-gradient(90deg,#FF6B6B,#FFD93D,#6BCB77,#4D96FF,#FF6BCB,#FF6B6B);
+  background-size:300% 300%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 4px 14px rgba(0,0,0,.25);transform:scale(.3) rotate(-6deg);opacity:0;}
+.hb-overlay.show .hb-text{animation:hbPopIn .8s cubic-bezier(.22,1.6,.4,1) forwards, hbRainbow 4s ease infinite 0.8s;}
+@keyframes hbPopIn{0%{transform:scale(.3) rotate(-6deg);opacity:0;}60%{transform:scale(1.15) rotate(3deg);opacity:1;}100%{transform:scale(1) rotate(0deg);opacity:1;}}
+@keyframes hbRainbow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+.balloon{position:fixed;bottom:-140px;width:44px;height:56px;border-radius:50% 50% 48% 48%/58% 58% 42% 42%;
+  box-shadow:inset -8px -10px 14px rgba(0,0,0,.15),inset 8px 8px 14px rgba(255,255,255,.35);
+  z-index:10001;animation:balloonFloat linear forwards;pointer-events:none;}
+.balloon::after{content:'';position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);width:2px;height:22px;background:rgba(255,255,255,.55);}
+@keyframes balloonFloat{0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:1;}92%{opacity:1;}100%{transform:translateY(-160vh) translateX(var(--sway,20px)) rotate(10deg);opacity:0;}}
+
+.confetti-piece{position:fixed;top:-20px;z-index:10001;pointer-events:none;animation:confettiFall2 ease-in forwards;}
+@keyframes confettiFall2{0%{transform:translateY(0) rotate(0deg);opacity:1;}100%{transform:translateY(105vh) rotate(720deg);opacity:0;}}
+
+/* Explore more cards on Birthday page */
+.explore-more{padding:8px 20px 30px;}
+.explore-more-tag{text-align:center;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#B08968;margin-bottom:14px;font-family:'Cormorant Garamond',serif;}
+.explore-card{display:flex;align-items:center;gap:14px;background:var(--warm-white);border:1px solid rgba(201,165,90,.2);border-radius:16px;padding:16px 18px;margin-bottom:12px;cursor:pointer;transition:transform .2s;box-shadow:0 2px 12px rgba(92,26,26,.06);}
+.explore-card:active{transform:scale(.98);}
+.explore-icon{font-size:26px;}
+.explore-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--maroon);}
+.explore-sub{font-size:11px;color:#9A7A70;margin-top:2px;}
+.page-back{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:1px;color:rgba(255,255,255,.7);cursor:pointer;padding:16px 20px 0;}
+
+/* Rose Almanac page */
+.almanac-hero{background:var(--maroon-deep);padding:50px 24px 34px;text-align:center;position:relative;overflow:hidden;}
+.almanac-hero-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(201,165,90,.75);margin-bottom:10px;}
+.almanac-hero-title{font-family:'Great Vibes',cursive;font-size:42px;color:var(--butter);}
+.almanac-hero-sub{font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.45);text-transform:uppercase;margin-top:8px;}
+.almanac-body{background:linear-gradient(180deg,#FBF3E3,#F7EAD3);padding:30px 20px 10px;}
+.almanac-card{border:1.5px solid rgba(146,94,58,.35);border-radius:6px;padding:22px 18px;margin-bottom:16px;position:relative;background:rgba(255,252,244,.6);}
+.almanac-card::before,.almanac-card::after{content:'✦';position:absolute;font-size:11px;color:rgba(146,94,58,.5);}
+.almanac-card::before{top:8px;left:8px;}
+.almanac-card::after{bottom:8px;right:8px;}
+.almanac-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;}
+.almanac-row:last-child{margin-bottom:0;}
+.almanac-icon{font-size:26px;width:38px;text-align:center;flex-shrink:0;}
+.almanac-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#925E3A;margin-bottom:2px;}
+.almanac-value{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#5C1A1A;}
+.almanac-desc{font-size:12px;color:#7A5C42;font-style:italic;margin-top:2px;line-height:1.5;}
+
+/* Growth Rings */
+.rings-wrap{padding:6px 20px 36px;text-align:center;}
+.rings-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--maroon);margin-bottom:4px;}
+.rings-sub{font-size:12px;color:#9A7A70;font-style:italic;margin-bottom:20px;}
+.rings-scroll{display:flex;gap:10px;overflow-x:auto;padding:6px 4px 16px;-webkit-overflow-scrolling:touch;}
+.ring-chip{flex-shrink:0;width:42px;height:42px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:14px;color:var(--maroon);cursor:pointer;transition:all .2s;background:var(--warm-white);}
+.ring-chip.active{background:var(--maroon);color:var(--butter);border-color:var(--maroon);transform:scale(1.12);}
+.ring-reveal{min-height:64px;background:var(--warm-white);border-radius:14px;padding:18px;border:1px solid rgba(201,165,90,.2);}
+.ring-reveal-year{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#B08968;margin-bottom:4px;}
+.ring-reveal-word{font-family:'Great Vibes',cursive;font-size:30px;color:var(--maroon);}
+
+/* Her Sky, That Night */
+.sky-page{background:linear-gradient(180deg,#0B0C1F 0%,#1A1233 55%,#2E1B3D 100%);min-height:100vh;position:relative;overflow:hidden;padding-bottom:40px;}
+.sky-hero{padding:50px 24px 20px;text-align:center;position:relative;z-index:2;}
+.sky-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(201,165,90,.7);margin-bottom:10px;}
+.sky-title{font-family:'Great Vibes',cursive;font-size:40px;color:var(--butter);margin-bottom:6px;}
+.sky-date{font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.45);text-transform:uppercase;}
+.sky-field{position:relative;height:340px;margin:20px 10px;}
+.star-el{position:absolute;cursor:pointer;font-size:20px;animation:twinkle 2.4s ease-in-out infinite;filter:drop-shadow(0 0 6px rgba(255,255,255,.7));z-index:2;}
+@keyframes twinkle{0%,100%{opacity:.5;transform:scale(.9);}50%{opacity:1;transform:scale(1.15);}}
+.moon-el{position:absolute;top:14px;right:24px;font-size:56px;z-index:2;filter:drop-shadow(0 0 20px rgba(245,230,163,.4));}
+.bg-star{position:absolute;background:#fff;border-radius:50%;opacity:.5;animation:twinkle 3s ease-in-out infinite;}
+.sky-reveal{margin:0 20px;min-height:70px;background:rgba(255,255,255,.06);border:1px solid rgba(201,165,90,.25);border-radius:16px;padding:18px 20px;backdrop-filter:blur(6px);position:relative;z-index:2;}
+.sky-reveal-hint{font-size:12px;color:rgba(255,255,255,.4);font-style:italic;text-align:center;}
+.sky-reveal-text{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--butter);text-align:center;line-height:1.6;}
+.moon-info{margin:24px 20px 0;text-align:center;font-size:12px;color:rgba(255,255,255,.45);letter-spacing:1px;position:relative;z-index:2;}
+
+/* Her Solar System */
+.solar-field{position:relative;width:100%;max-width:320px;height:320px;margin:20px auto 0;}
+.sun{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;
+  background:radial-gradient(circle,#FFEFA8,#FF7A3D);box-shadow:0 0 26px rgba(255,190,90,.75),0 0 50px rgba(255,140,60,.35);
+  display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;z-index:5;animation:sunPulse 3s ease-in-out infinite;}
+.sun.found{box-shadow:0 0 40px rgba(255,190,90,.95),0 0 80px rgba(255,140,60,.6);}
+@keyframes sunPulse{0%,100%{filter:brightness(1);}50%{filter:brightness(1.25);}}
+.orbit-ring{position:absolute;top:50%;left:50%;border:1px dashed rgba(255,255,255,.14);border-radius:50%;animation:orbitSpin linear infinite;pointer-events:none;}
+@keyframes orbitSpin{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(360deg);}}
+.planet{position:absolute;top:50%;left:100%;border-radius:50%;transform:translate(-50%,-50%);animation:counterSpin linear infinite;
+  cursor:pointer;box-shadow:0 0 8px rgba(0,0,0,.35);pointer-events:auto;}
+.planet.found{box-shadow:0 0 14px rgba(245,230,163,.95),0 0 24px rgba(201,165,90,.6);}
+@keyframes counterSpin{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(-360deg);}}
+.saturn-ring{position:absolute;top:50%;left:50%;width:190%;height:60%;border:1.5px solid rgba(230,200,140,.85);border-radius:50%;transform:translate(-50%,-50%) rotate(-20deg);pointer-events:none;}
+.const-progress{text-align:center;font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.4);text-transform:uppercase;margin-top:14px;position:relative;z-index:2;}
+.const-complete{margin:20px 20px 0;text-align:center;position:relative;z-index:2;opacity:0;max-height:0;overflow:hidden;transition:opacity .8s ease;}
+.const-complete.show{opacity:1;max-height:200px;}
+.const-complete-title{font-family:'Great Vibes',cursive;font-size:34px;color:var(--butter);margin-bottom:8px;}
+.const-complete-sub{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:rgba(255,255,255,.65);}
+.const-reset{display:inline-block;margin-top:14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(201,165,90,.75);border:1px solid rgba(201,165,90,.4);border-radius:20px;padding:8px 18px;cursor:pointer;}
+
+/* Her Comfort Universe - show shelf */
+.shows-hero{background:var(--maroon-deep);padding:50px 24px 32px;text-align:center;}
+.shows-hero-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(201,165,90,.75);margin-bottom:10px;}
+.shows-hero-title{font-family:'Great Vibes',cursive;font-size:40px;color:var(--butter);}
+.shows-hero-sub{font-size:12px;letter-spacing:1px;color:rgba(255,255,255,.5);margin-top:8px;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.shows-body{background:linear-gradient(180deg,#FBF3E3,#F7EAD3);padding:26px 16px 30px;}
+.shows-section-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:var(--maroon);margin:0 4px 12px;letter-spacing:1px;}
+.shows-section-title:not(:first-child){margin-top:30px;}
+.show-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.show-card{perspective:900px;height:150px;}
+.show-card-inner{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;cursor:pointer;}
+.show-card.flipped .show-card-inner{transform:rotateY(180deg);}
+.show-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;display:flex;flex-direction:column;align-items:center;padding:14px;text-align:center;box-shadow:0 3px 14px rgba(92,26,26,.15);}
+.show-front{justify-content:flex-end;padding-bottom:16px;}
+.show-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:15px;line-height:1.25;}
+.show-sub{font-size:9px;letter-spacing:2px;text-transform:uppercase;margin-top:6px;opacity:.75;}
+.show-back{transform:rotateY(180deg);justify-content:center;border:1px solid rgba(255,255,255,.15);}
+.show-back-text{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;line-height:1.5;}
+
+/* A Letter, Locked */
+.sealed-page{background:linear-gradient(180deg,#1A0C10 0%,#2B0D0D 55%,#180608 100%);min-height:100vh;padding-bottom:50px;}
+.sealed-hero{padding:50px 24px 6px;text-align:center;}
+.sealed-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(201,165,90,.75);margin-bottom:10px;}
+.sealed-title{font-family:'Great Vibes',cursive;font-size:42px;color:var(--butter);margin-bottom:6px;}
+.sealed-sub{font-size:12px;letter-spacing:1px;color:rgba(255,255,255,.5);font-family:'Cormorant Garamond',serif;font-style:italic;}
+.sealed-envelope-wrap{display:flex;justify-content:center;margin:40px 0 24px;}
+.sealed-envelope{position:relative;width:220px;height:150px;}
+.sealed-back{position:absolute;inset:0;background:linear-gradient(160deg,#EDD9B2,#D9BB74);border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.4);}
+.sealed-flap{position:absolute;top:0;left:0;width:100%;height:0;border-left:110px solid transparent;border-right:110px solid transparent;
+  border-top:78px solid #C9A55A;filter:drop-shadow(0 2px 4px rgba(0,0,0,.2));}
+.sealed-wax{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#8B1E3F,#5C1228);box-shadow:0 3px 8px rgba(0,0,0,.4);
+  display:flex;align-items:center;justify-content:center;font-size:18px;color:rgba(245,230,163,.85);z-index:2;}
+.sealed-countdown{display:flex;justify-content:center;gap:10px;margin-top:6px;}
+.sealed-cd-box{background:rgba(255,255,255,.06);border:1px solid rgba(201,165,90,.3);border-radius:14px;padding:12px 10px;min-width:56px;text-align:center;}
+.sealed-cd-num{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--butter);line-height:1;}
+.sealed-cd-lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:5px;}
+.sealed-hint{text-align:center;font-size:12px;color:rgba(255,255,255,.45);font-style:italic;font-family:'Cormorant Garamond',serif;margin-top:20px;}
+.sealed-letter-body{display:none;margin:10px 24px 0;background:var(--warm-white);border-radius:18px;padding:28px 24px;
+  box-shadow:0 8px 30px rgba(0,0,0,.3);}
+.sealed-letter-body.show{display:block;}
+.sealed-letter-to{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#B08968;margin-bottom:16px;}
+.sealed-letter-text{font-family:'IM Fell English',serif;font-size:16px;line-height:2;color:#4A3030;font-style:italic;}
+.sealed-letter-sign{margin-top:22px;font-family:'Great Vibes',cursive;font-size:26px;color:#6B1E3C;text-align:right;}
+
+/* Shared scene-page header style */
+.scene-page{min-height:100vh;padding-bottom:50px;}
+.scene-hero{padding:50px 24px 6px;text-align:center;}
+.scene-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:10px;}
+.scene-title{font-family:'Great Vibes',cursive;font-size:42px;margin-bottom:6px;}
+.scene-sub{font-size:12px;letter-spacing:1px;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.scene-box{position:relative;height:340px;margin:20px 12px 0;border-radius:18px;overflow:hidden;cursor:pointer;}
+.scene-hint{text-align:center;font-size:12px;font-style:italic;font-family:'Cormorant Garamond',serif;margin-top:14px;}
+.scene-reveal{margin:16px 24px 0;min-height:64px;border-radius:16px;padding:18px 20px;text-align:center;
+  opacity:0;max-height:0;overflow:hidden;transition:opacity .8s ease;}
+.scene-reveal.show{opacity:1;max-height:200px;}
+.scene-reveal-text{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;line-height:1.7;}
+
+/* Her Quiet Magic - butterfly + rain (enhanced) */
+#qmRain,#qmDrips,#qmPuddles{position:absolute;inset:0;pointer-events:none;}
+.qm-page{
+  background:
+    radial-gradient(ellipse 60% 40% at 88% 92%, rgba(224,164,96,.16), transparent 60%),
+    linear-gradient(180deg,#414D5B 0%,#333F4C 28%,#2A3542 55%,#1E2830 85%,#161E25 100%);
+  position:relative;overflow:hidden;isolation:isolate;
+}
+.qm-page::before{
+  content:'';position:absolute;inset:0;pointer-events:none;opacity:.6;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 18%, rgba(255,255,255,.5), transparent 60%),
+    radial-gradient(1px 1px at 78% 12%, rgba(255,255,255,.35), transparent 60%),
+    radial-gradient(1.5px 1.5px at 40% 8%, rgba(255,255,255,.3), transparent 60%),
+    radial-gradient(1px 1px at 92% 30%, rgba(255,255,255,.3), transparent 60%);
+}
+.qm-page .scene-tag{color:rgba(255,255,255,.7);}
+.qm-page .scene-title{color:#F5EEE0;text-shadow:0 2px 18px rgba(245,238,224,.18);}
+.qm-page .scene-sub{color:rgba(255,255,255,.55);}
+
+.qm-mountains{position:absolute;left:0;right:0;bottom:0;height:38%;z-index:-1;pointer-events:none;overflow:hidden;}
+.qm-mountain{position:absolute;bottom:0;width:70%;}
+.qm-mountain.far{left:-10%;height:100%;
+  background:linear-gradient(180deg, rgba(146,167,196,.5), rgba(90,108,133,.65));
+  clip-path:polygon(0% 100%,0% 55%,15% 30%,28% 48%,40% 15%,55% 42%,68% 22%,82% 50%,100% 35%,100% 100%);
+  filter:blur(.5px);}
+.qm-mountain.near{right:-10%;height:80%;
+  background:linear-gradient(180deg, rgba(52,64,80,.96), rgba(24,32,42,1));
+  clip-path:polygon(0% 100%,0% 45%,18% 20%,32% 40%,48% 8%,65% 38%,80% 18%,100% 42%,100% 100%);}
+.qm-moon{position:absolute;top:6%;right:12%;width:46px;height:46px;border-radius:50%;z-index:-1;pointer-events:none;
+  background:radial-gradient(circle at 35% 35%, #FFF8E8, #F3E6C8 55%, #E4D3A8 100%);
+  box-shadow:0 0 30px 10px rgba(255,244,214,.25), 0 0 70px 24px rgba(255,244,214,.08);}
+
+.qm-window{
+  box-sizing:border-box;background:linear-gradient(180deg,#232E3A,#141C24);position:relative;overflow:hidden;
+  border-radius:8px;border:14px solid #5E4530;border-image:linear-gradient(155deg,#A9855F,#6B4F36 42%,#3A2A1C 100%) 1;
+  box-shadow:inset 0 0 60px rgba(0,0,0,.55), inset 0 0 2px rgba(255,255,255,.06), 0 20px 34px rgba(0,0,0,.45), 0 2px 0 rgba(255,255,255,.05);
+  height:420px;
+}
+.qm-window::before{content:'';position:absolute;inset:0;border-radius:2px;z-index:5;pointer-events:none;
+  box-shadow:inset 0 2px 5px rgba(255,255,255,.12), inset 0 -4px 10px rgba(0,0,0,.5), inset 0 0 0 1px rgba(230,225,210,.2);}
+.qm-window::after{content:'';position:absolute;top:0;bottom:0;left:50%;width:9px;margin-left:-4.5px;
+  background:linear-gradient(90deg,#3A2A1C,#7C5D40 35%,#A9855F 50%,#7C5D40 65%,#3A2A1C);
+  box-shadow:1px 0 3px rgba(0,0,0,.35),-1px 0 3px rgba(0,0,0,.35);z-index:5;pointer-events:none;}
+.qm-hbar{position:absolute;left:0;right:0;top:50%;height:9px;margin-top:-4.5px;
+  background:linear-gradient(180deg,#3A2A1C,#7C5D40 35%,#A9855F 50%,#7C5D40 65%,#3A2A1C);
+  box-shadow:0 1px 3px rgba(0,0,0,.35),0 -1px 3px rgba(0,0,0,.35);z-index:5;pointer-events:none;}
+.qm-sill{margin:0 12px;height:16px;background:linear-gradient(180deg,#7C5D40,#3A2A1C);
+  border-radius:0 0 5px 5px;box-shadow:0 8px 16px rgba(0,0,0,.4), inset 0 2px 2px rgba(255,255,255,.18);}
+.qm-drip{position:absolute;top:var(--dy,20%);left:var(--dx,50%);width:1px;height:var(--dh,60px);
+  background:linear-gradient(180deg, rgba(200,220,240,.22), rgba(200,220,240,.05));
+  border-radius:2px;opacity:.5;z-index:2;pointer-events:none;}
+
+.qm-glow{position:absolute;left:8%;bottom:6%;width:55%;height:45%;
+  background:radial-gradient(ellipse at center, rgba(255,196,120,.16), transparent 70%);
+  filter:blur(6px);z-index:1;pointer-events:none;}
+.qm-fog{position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:
+    radial-gradient(ellipse 40% 25% at 6% 96%, rgba(210,225,235,.10), transparent 70%),
+    radial-gradient(ellipse 35% 22% at 96% 8%, rgba(210,225,235,.08), transparent 70%);}
+.qm-sheen{position:absolute;top:-20%;left:-30%;width:60%;height:160%;
+  background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.05) 48%, rgba(255,255,255,.1) 50%, rgba(255,255,255,.05) 52%, transparent 60%);
+  transform:rotate(8deg);pointer-events:none;z-index:5;}
+
+.qm-flash{position:absolute;inset:0;background:rgba(230,235,255,.9);opacity:0;pointer-events:none;z-index:8;}
+.qm-flash.strike{animation:qmLightning 0.5s ease-out;}
+@keyframes qmLightning{0%{opacity:0;}6%{opacity:.85;}12%{opacity:.1;}18%{opacity:.7;}30%{opacity:0;}100%{opacity:0;}}
+.qm-bolt{position:absolute;top:6%;opacity:0;pointer-events:none;z-index:8;filter:drop-shadow(0 0 6px rgba(220,230,255,.8));}
+.qm-bolt.strike{animation:qmBoltShow 0.5s ease-out;}
+@keyframes qmBoltShow{0%{opacity:0;}6%{opacity:1;}18%{opacity:.2;}24%{opacity:.9;}35%{opacity:0;}100%{opacity:0;}}
+
+.qm-drop{
+  position:absolute;top:-12%;height:60px;left:var(--x,50%);width:var(--w,1.5px);border-radius:3px;
+  background:linear-gradient(180deg,transparent, rgba(205,222,242,var(--op,.6)) 45%, rgba(230,240,252,.95));
+  filter:blur(var(--blur,.2px));animation:qmFall linear infinite;
+  animation-duration:var(--dur,1.3s);animation-delay:var(--delay,0s);z-index:2;
+}
+@keyframes qmFall{
+  0%{transform:translateY(0) translateX(0) rotate(var(--tilt,8deg));opacity:0;}
+  6%{opacity:1;}92%{opacity:1;}
+  100%{transform:translateY(440px) translateX(var(--drift,16px)) rotate(var(--tilt,8deg));opacity:0;}
+}
+.qm-puddle-ring{position:absolute;bottom:16px;width:6px;height:6px;border:1px solid rgba(200,220,240,.5);border-radius:50%;
+  left:var(--rx,50%);opacity:0;animation:qmRipple ease-out infinite;
+  animation-delay:var(--rdelay,0s);animation-duration:var(--rdur,1.8s);}
+@keyframes qmRipple{0%{opacity:.7;transform:scale(.3);}100%{opacity:0;transform:scale(3.2);}}
+
+/* Realistic CSS-drawn butterfly (no emoji, renders consistently everywhere) */
+.qm-butterfly{position:absolute;width:44px;height:38px;top:60%;left:-15%;opacity:0;z-index:6;
+  filter:drop-shadow(0 3px 6px rgba(0,0,0,.35));}
+.qm-butterfly.flying{animation:qmFlyIn 2.6s cubic-bezier(.3,.1,.3,1) forwards;}
+.qm-butterfly.landed{left:47%;top:42%;opacity:1;animation:qmFlutter 2.2s ease-in-out infinite;}
+.qmb-shadow{position:absolute;left:50%;top:34px;width:26px;height:6px;
+  background:radial-gradient(ellipse at center, rgba(0,0,0,.28), transparent 70%);
+  transform:translateX(-50%);opacity:0;transition:opacity .6s ease;z-index:1;}
+.qm-butterfly.landed .qmb-shadow{opacity:1;}
+.qmb-body{position:absolute;left:50%;top:6%;width:3px;height:26px;background:linear-gradient(180deg,#3A2A1E,#5C4430);
+  border-radius:3px;transform:translateX(-50%);z-index:2;animation:qmBodyWobble 2.4s ease-in-out infinite;}
+@keyframes qmBodyWobble{0%,100%{transform:translateX(-50%) rotate(0deg);}50%{transform:translateX(-50%) rotate(2deg);}}
+.qmb-antenna{position:absolute;left:50%;top:-2px;width:14px;height:10px;transform:translateX(-50%);
+  animation:qmAntennaSway 2.4s ease-in-out infinite;}
+@keyframes qmAntennaSway{0%,100%{transform:translateX(-50%) rotate(0deg);}50%{transform:translateX(-50%) rotate(-3deg);}}
+.qmb-antenna::before,.qmb-antenna::after{content:'';position:absolute;top:0;width:1.2px;height:9px;background:#3A2A1E;
+  transform-origin:bottom center;}
+.qmb-antenna::before{left:5px;transform:rotate(-25deg);}
+.qmb-antenna::after{right:5px;transform:rotate(25deg);}
+.qmb-wing{position:absolute;top:2px;width:20px;height:26px;border-radius:80% 20% 80% 20%;
+  background:radial-gradient(ellipse at 30% 30%,#F8D3E4,#E28FBE 45%,#B8568E 80%,#8F3D6E);
+  box-shadow:inset -2px -2px 5px rgba(120,30,70,.35);filter:saturate(1.08);}
+.qmb-wing.upper-left{left:calc(50% - 21px);transform-origin:right center;border-radius:80% 20% 80% 20%;}
+.qmb-wing.upper-right{left:calc(50% + 1px);transform-origin:left center;border-radius:20% 80% 20% 80%;}
+.qmb-wing.lower-left{left:calc(50% - 15px);top:16px;width:14px;height:18px;transform-origin:right center;
+  border-radius:60% 30% 70% 30%;background:radial-gradient(ellipse at 30% 30%,#F3C8DE,#D080AC 50%,#A84E82 85%);}
+.qmb-wing.lower-right{left:calc(50% + 1px);top:16px;width:14px;height:18px;transform-origin:left center;
+  border-radius:30% 60% 30% 70%;background:radial-gradient(ellipse at 70% 30%,#F3C8DE,#D080AC 50%,#A84E82 85%);}
+.qmb-wing::after{content:'';position:absolute;top:35%;left:35%;width:6px;height:6px;border-radius:50%;background:rgba(255,250,240,.6);}
+.qmb-wing::before{content:'';position:absolute;inset:2px;border-radius:inherit;pointer-events:none;
+  background:
+    linear-gradient(105deg, transparent 46%, rgba(90,20,55,.18) 48%, transparent 50%),
+    linear-gradient(70deg, transparent 60%, rgba(90,20,55,.14) 62%, transparent 64%);}
+.qm-butterfly.landed .qmb-wing{animation:qmWingFlapRest 2.2s ease-in-out infinite, qmShimmer 6s ease-in-out infinite;}
+.qm-butterfly.flying .qmb-wing{animation:qmWingFlapFly .22s ease-in-out infinite alternate;}
+@keyframes qmShimmer{0%,100%{filter:hue-rotate(0deg) saturate(1.08);}50%{filter:hue-rotate(8deg) saturate(1.2);}}
+@keyframes qmWingFlapFly{0%{transform:rotateY(0deg) scaleX(1);}100%{transform:rotateY(55deg) scaleX(.65);}}
+@keyframes qmWingFlapRest{0%,100%{transform:rotateY(10deg) scaleX(.92);}50%{transform:rotateY(0deg) scaleX(1);}}
+@keyframes qmFlyIn{
+  0%{left:-15%;top:70%;transform:scale(.7) rotate(-6deg);opacity:0;}
+  10%{opacity:1;}
+  35%{left:22%;top:20%;transform:scale(.95) rotate(6deg);}
+  55%{left:40%;top:38%;transform:scale(1) rotate(-4deg);}
+  75%{left:58%;top:22%;transform:scale(1) rotate(5deg);}
+  100%{left:47%;top:42%;transform:scale(1.15) rotate(0deg);opacity:1;}
+}
+@keyframes qmFlutter{0%,100%{transform:scale(1.15) translateY(0);}50%{transform:scale(1.12) translateY(-3px);}}
+
+/* Her Dream City — day by default, tap the sun to bring on the vampire night
+   One class drives the whole transformation: .dc-page.night — every night-only
+   element (sky, stars, moon, crimson windows, bats, vampire, fog) reacts to it
+   via CSS, so the JS only ever has to toggle that single class.
+   No font-family rule touched anywhere in this file. */
+
+.dc-page{
+  min-height:100vh;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background:#8FB4D9; /* fallback, fully covered by .dc-sky-day/.dc-sky-night */
+}
+.dc-page .page-back{position:relative;z-index:2;color:rgba(30,28,22,.6);transition:color 1.6s ease;}
+.dc-page .scene-tag{color:#2E2C22;transition:color 1.6s ease;}
+.dc-page .scene-title{font-family:'Creepster',cursive;font-size:40px;letter-spacing:1px;color:#1E1C16;text-shadow:0 2px 16px rgba(255,255,255,.25);
+  transition:color 1.6s ease, text-shadow 1.6s ease;}
+.dc-page .scene-sub{color:rgba(30,28,22,.68);transition:color 1.6s ease;}
+.dc-page .scene-hero{position:relative;z-index:2;pointer-events:none;}
+
+.dc-page.night .page-back{color:rgba(240,232,220,.65);}
+.dc-page.night .scene-tag{color:#F0E6D6;}
+.dc-page.night .scene-title{color:#FBF3E4;text-shadow:0 2px 20px rgba(230,90,40,.3);}
+.dc-page.night .scene-sub{color:rgba(240,232,220,.65);}
+
+/* a hint that shows briefly on load, then fades away for good — pure CSS, no JS needed */
+.dc-hint{position:relative;z-index:2;margin:14px auto 0;font-style:italic;
+  color:rgba(30,28,22,.6);pointer-events:none;
+  animation:dcHintFade 5s ease forwards;}
+.dc-page.night .dc-hint{color:rgba(240,232,220,.6);}
+@keyframes dcHintFade{
+  0%{opacity:0;transform:translateY(4px);}
+  10%{opacity:1;transform:translateY(0);}
+  75%{opacity:1;transform:translateY(0);}
+  100%{opacity:0;transform:translateY(-4px);}
+}
+
+.dc-scene{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+
+/* ---------- sky: two full layers, crossfading on .night ---------- */
+.dc-sky-day{position:absolute;inset:0;opacity:1;transition:opacity 2s ease;will-change:opacity;
+  background:
+    radial-gradient(ellipse 40% 30% at 70% 20%, rgba(255,250,220,.55), transparent 60%),
+    linear-gradient(180deg,#BFE0F2 0%,#9CC9E8 40%,#7FB3DC 70%,#6BA0CC 100%);}
+
+.dc-sky-night{position:absolute;inset:0;opacity:0;transition:opacity 2s ease;will-change:opacity;
+  background:
+    radial-gradient(ellipse 50% 35% at 62% 26%, rgba(230,90,40,.32), transparent 65%),
+    linear-gradient(180deg,#0B0C14 0%,#0A0A11 40%,#08080D 70%,#050508 100%);}
+.dc-sky-night::before{ /* stars */
+  content:'';position:absolute;inset:0;pointer-events:none;opacity:.85;
+  background-image:
+    radial-gradient(1.3px 1.3px at 8% 15%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 22% 8%, #fff, transparent 60%),
+    radial-gradient(1.4px 1.4px at 35% 20%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 12% 35%, rgba(255,255,255,.8), transparent 60%),
+    radial-gradient(1.2px 1.2px at 48% 12%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 82% 10%, rgba(255,255,255,.7), transparent 60%),
+    radial-gradient(1.3px 1.3px at 92% 20%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 6% 50%, rgba(255,255,255,.6), transparent 60%),
+    radial-gradient(1.2px 1.2px at 28% 42%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 96% 42%, rgba(255,255,255,.65), transparent 60%);}
+
+.dc-page.night .dc-sky-day{opacity:0;}
+.dc-page.night .dc-sky-night{opacity:1;}
+
+/* ---------- sun by day, blood moon by night — same element, tap it to trigger everything ----------
+   Positioned once at its final (night) box, then just scaled/shifted down for
+   day via transform — animating transform instead of top/left/width/height
+   keeps this on the GPU and off the layout thread, so it stays smooth. */
+.dc-moon-wrap{position:absolute;top:12%;left:56%;width:150px;height:150px;cursor:pointer;pointer-events:auto;
+  transform:translate(28px,96px) scale(.4667);
+  transform-origin:center center;
+  transition:transform 2.2s ease;
+  will-change:transform;}
+.dc-page.night .dc-moon-wrap{transform:translate(0,0) scale(1);}
+
+.dc-moon-pale{position:absolute;inset:0;border-radius:50%;opacity:1;transition:opacity 1.8s ease;
+  will-change:opacity;
+  background:radial-gradient(circle at 40% 35%, #FFFDF0, #FFEFA8 55%, #FFD65C 100%);
+  box-shadow:0 0 50px 18px rgba(255,230,140,.55), 0 0 100px 40px rgba(255,220,120,.25);}
+
+.dc-moon-blood{position:absolute;inset:0;border-radius:50%;opacity:0;transition:opacity 1.8s ease;
+  will-change:opacity;
+  background:
+    radial-gradient(circle at 30% 26%, rgba(20,4,0,.22), transparent 20%),
+    radial-gradient(circle at 62% 52%, rgba(20,4,0,.18), transparent 18%),
+    radial-gradient(circle at 45% 72%, rgba(20,4,0,.15), transparent 22%),
+    radial-gradient(circle at 70% 30%, rgba(20,4,0,.12), transparent 16%),
+    radial-gradient(circle at 42% 40%, #FF8449, #F5480F 42%, #C41E0A 72%, #7C1004 100%);
+  box-shadow:
+    0 0 60px 18px rgba(255,90,30,.55),
+    0 0 130px 55px rgba(220,55,15,.32),
+    0 0 220px 100px rgba(180,30,10,.16);}
+
+.dc-page.night .dc-moon-pale{opacity:0;}
+.dc-page.night .dc-moon-blood{opacity:1;}
+
+/* the hidden line, revealed once the moon finishes turning — swap in your own words */
+.dc-secret-line{position:relative;z-index:2;margin:16px auto 0;max-width:300px;
+  opacity:0;transform:translateY(6px);transition:opacity 1s ease, transform 1s ease;
+  font-style:italic;color:#F0B49A;}
+.dc-secret-line.show{opacity:1;transform:translateY(0);}
+
+/* ---------- bats — only fly at night ---------- */
+.dc-bat{position:absolute;width:20px;height:10px;opacity:0;transition:opacity 1.6s ease;will-change:opacity;}
+.dc-bat::before,.dc-bat::after{content:'';position:absolute;top:0;width:10px;height:10px;
+  background:rgba(18,15,13,.85);
+  clip-path:polygon(100% 80%, 60% 0%, 40% 55%, 15% 15%, 0% 60%, 45% 100%);}
+.dc-bat::before{left:0;}
+.dc-bat::after{right:0;transform:scaleX(-1);}
+.dc-bat.b1{top:16%;left:46%;}
+.dc-bat.b2{top:25%;left:60%;width:15px;transform:scale(.8);}
+.dc-page.night .dc-bat{opacity:.85;}
+
+/* ---------- the vampire — a creature of the night only ---------- */
+.dc-vampire{position:absolute;width:40px;height:44px;opacity:0;pointer-events:none;
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,.5)) drop-shadow(0 0 8px rgba(214,70,62,.55));
+  transition:opacity 1.6s ease;will-change:opacity;
+  animation:vampFloat 4.5s ease-in-out infinite;}
+.dc-vampire::before{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);
+  width:7px;height:7px;border-radius:50%;background:#0C0A0E;z-index:1;}
+/* glowing red eyes — the detail that makes it readable as a vampire, not just a dark blob */
+.dc-vampire::after{content:'';position:absolute;top:11px;left:50%;transform:translateX(-50%);width:1px;height:1px;z-index:2;
+  box-shadow:-2.5px 0 3px 1px rgba(255,59,48,.95), 2.5px 0 3px 1px rgba(255,59,48,.95);}
+.dc-vampire-cape{position:absolute;top:5px;left:50%;transform:translateX(-50%);width:22px;height:39px;
+  background:linear-gradient(180deg,#2A2028,#0A0610);
+  clip-path:polygon(50% 8%, 100% 4%, 100% 100%, 72% 55%, 56% 92%, 50% 60%, 44% 92%, 28% 55%, 0% 100%, 0% 4%);}
+@keyframes vampFloat{
+  0%,100%{transform:translateY(0) rotate(-2deg);}
+  50%{transform:translateY(-10px) rotate(2deg);}
+}
+.dc-page.night .dc-vampire{opacity:1;pointer-events:auto;cursor:pointer;}
+
+.dc-vampire-line{position:relative;z-index:2;margin:10px auto 0;max-width:300px;
+  opacity:0;transform:translateY(6px);transition:opacity .9s ease, transform .9s ease;
+  font-style:italic;color:#F0B49A;}
+.dc-vampire-line.show{opacity:1;transform:translateY(0);}
+
+/* ---------- the skyline itself — stays the same silhouette day or night ---------- */
+.dc-skyline-glow{position:absolute;left:-1%;right:-1%;bottom:0;height:43%;opacity:0;transition:opacity 1.8s ease;will-change:opacity;
+  background:linear-gradient(180deg,#8A5040,#4A241C);
+  clip-path:polygon(
+    0% 100%, 0% 62%,
+    5% 62%, 5% 40%, 9% 40%, 9% 62%,
+    14% 62%, 14% 18%, 17% 6%, 20% 18%, 20% 62%,
+    26% 62%, 26% 50%, 32% 50%, 32% 64%,
+    37% 64%, 37% 22%, 40% 10%, 43% 22%, 43% 64%,
+    49% 64%, 49% 46%, 55% 46%, 55% 66%,
+    60% 66%, 60% 14%, 63% 2%, 66% 14%, 66% 66%,
+    72% 66%, 72% 52%, 78% 52%, 78% 68%,
+    84% 68%, 84% 28%, 87% 16%, 90% 28%, 90% 68%,
+    96% 68%, 96% 56%, 100% 56%,
+    100% 100%
+  );
+  filter:blur(3px);}
+.dc-page.night .dc-skyline-glow{opacity:.6;}
+
+.dc-skyline{position:absolute;left:0;right:0;bottom:0;height:42%;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 13px),
+    linear-gradient(180deg,#3A382E,#18160F);
+  clip-path:polygon(
+    0% 100%, 0% 62%,
+    5% 62%, 5% 40%, 9% 40%, 9% 62%,
+    14% 62%, 14% 18%, 17% 6%, 20% 18%, 20% 62%,
+    26% 62%, 26% 50%, 32% 50%, 32% 64%,
+    37% 64%, 37% 22%, 40% 10%, 43% 22%, 43% 64%,
+    49% 64%, 49% 46%, 55% 46%, 55% 66%,
+    60% 66%, 60% 14%, 63% 2%, 66% 14%, 66% 66%,
+    72% 66%, 72% 52%, 78% 52%, 78% 68%,
+    84% 68%, 84% 28%, 87% 16%, 90% 28%, 90% 68%,
+    96% 68%, 96% 56%, 100% 56%,
+    100% 100%
+  );
+}
+
+.dc-ground-glow{position:absolute;left:0;right:0;bottom:0;height:4%;opacity:0;transition:opacity 1.8s ease;will-change:opacity;
+  background:linear-gradient(180deg, rgba(196,50,45,.09), transparent);}
+.dc-page.night .dc-ground-glow{opacity:1;}
+
+/* ---------- crimson windows — dark and unlit by day ---------- */
+.dc-light{position:absolute;width:2px;height:2px;border-radius:50%;background:#D6453E;
+  box-shadow:0 0 5px 2px rgba(200,50,45,.65);opacity:0;transition:opacity 1.8s ease;will-change:opacity;}
+.dc-page.night .dc-light{opacity:1;}
+
+.dc-window{position:absolute;width:5px;height:11px;
+  background:linear-gradient(180deg, rgba(214,70,62,.95), rgba(150,32,30,.75));
+  clip-path:polygon(50% 0%, 100% 28%, 100% 100%, 0% 100%, 0% 28%);
+  box-shadow:0 0 6px 2px rgba(196,45,40,.45);opacity:0;transition:opacity 1.8s ease;will-change:opacity;}
+.dc-page.night .dc-window{opacity:1;}
+
+.dc-rose{position:absolute;width:15px;height:15px;border-radius:50%;opacity:0;transition:opacity 1.8s ease;will-change:opacity;
+  background:radial-gradient(circle, rgba(214,70,62,.9) 0%, rgba(150,32,30,.5) 55%, transparent 75%);
+  box-shadow:0 0 10px 3px rgba(196,45,40,.4);}
+.dc-rose::before{content:'';position:absolute;inset:2px;border-radius:50%;
+  background:
+    linear-gradient(0deg, transparent 46%, rgba(35,30,20,.5) 46% 54%, transparent 54%),
+    linear-gradient(90deg, transparent 46%, rgba(35,30,20,.5) 46% 54%, transparent 54%),
+    linear-gradient(45deg, transparent 46%, rgba(35,30,20,.4) 46% 54%, transparent 54%),
+    linear-gradient(135deg, transparent 46%, rgba(35,30,20,.4) 46% 54%, transparent 54%);}
+.dc-page.night .dc-rose{opacity:1;}
+
+/* tiny finials on the spire tips — carved stone, visible day or night */
+.dc-finial{position:absolute;width:3px;height:3px;border-radius:50%;
+  background:linear-gradient(135deg,#59564A,#2A2820);}
+
+/* ---------- ground haze — only rolls in at night ---------- */
+.dc-fog{position:absolute;inset:0;opacity:0;transition:opacity 2s ease;will-change:opacity;
+  background:
+    radial-gradient(ellipse 55% 22% at 25% 68%, rgba(70,55,55,.28), transparent 70%),
+    radial-gradient(ellipse 50% 20% at 75% 62%, rgba(70,55,55,.22), transparent 70%);
+  animation:dcHaze 14s ease-in-out infinite;}
+.dc-page.night .dc-fog{opacity:1;}
+@keyframes dcHaze{0%,100%{background-position:0 0,0 0;}50%{background-position:18px 0,-14px 0;}}
+
+/* Her Sweetest Things - coquette + desserts (realistic, borderless, knife-cutting) */
+.st-page{background:linear-gradient(180deg,#FCE9EF 0%,#F8D9E4 55%,#F3C9D8 100%);}
+.st-page .scene-tag{color:#B0426B;}
+.st-page .scene-title{color:#8B2A52;}
+.st-page .scene-sub{color:#A8607C;}
+
+.st-scene{position:relative;width:100%;height:480px;margin:14px 0 0;overflow:visible;}
+.st-plate{position:absolute;bottom:16%;left:50%;transform:translateX(-50%);width:210px;height:34px;border-radius:50%;
+  background:radial-gradient(ellipse at 35% 30%,#FFFFFF,#F0DCE4 70%,#DCC0CC);
+  box-shadow:0 10px 18px rgba(139,42,82,.25), inset 0 2px 4px rgba(255,255,255,.8), inset 0 -3px 6px rgba(180,120,150,.25);}
+.st-cake-shadow{position:absolute;bottom:14%;left:50%;transform:translateX(-50%);width:150px;height:18px;border-radius:50%;
+  background:radial-gradient(ellipse at center, rgba(120,30,70,.28), transparent 70%);filter:blur(2px);}
+.st-cake{position:absolute;bottom:20%;left:50%;transform:translateX(-50%);width:150px;z-index:2;}
+.st-cake-half{position:relative;transition:transform .7s cubic-bezier(.3,.15,.25,1);}
+.st-cake-half.left{clip-path:inset(0 50% 0 0);}
+.st-cake-half.right{clip-path:inset(0 0 0 50%);position:absolute;top:0;left:0;width:100%;}
+.st-cake.cut .st-cake-half.left{transform:translateX(-16px) rotate(-2deg);}
+.st-cake.cut .st-cake-half.right{transform:translateX(16px) rotate(2deg);}
+
+.st-tier{position:relative;border-radius:6px 6px 3px 3px;box-shadow:0 6px 16px rgba(139,42,82,.25);overflow:hidden;}
+.st-tier.bottom{width:150px;height:58px;background:linear-gradient(160deg,#FDE1EC,#F6B9D2 55%,#F2A2C1);}
+.st-tier.top{width:108px;height:46px;margin:3px auto 0;background:linear-gradient(160deg,#FFF3F8,#FFDCEC 55%,#FBC7DE);}
+/* buttercream piping texture */
+.st-tier::before{content:'';position:absolute;inset:0;opacity:.55;
+  background-image:radial-gradient(circle at 15% 25%, rgba(255,255,255,.55) 0 2.5px, transparent 3px),
+    radial-gradient(circle at 40% 60%, rgba(255,255,255,.45) 0 2.5px, transparent 3px),
+    radial-gradient(circle at 65% 30%, rgba(255,255,255,.5) 0 2.5px, transparent 3px),
+    radial-gradient(circle at 85% 65%, rgba(255,255,255,.4) 0 2.5px, transparent 3px),
+    radial-gradient(circle at 28% 85%, rgba(255,255,255,.4) 0 2.5px, transparent 3px);
+  background-size:26px 26px;}
+/* cut cross-section: sponge + frosting stripes, revealed via clip-path split */
+.st-tier::after{content:'';position:absolute;top:0;bottom:0;left:50%;width:6px;margin-left:-3px;
+  background:repeating-linear-gradient(180deg,#E8C69A 0 5px,#FBE3C4 5px 8px,#F4A8C6 8px 11px);
+  opacity:0;transition:opacity .3s ease .5s;}
+.st-cake.cut .st-tier::after{opacity:1;}
+.st-drip{position:absolute;top:-2px;left:0;right:0;height:14px;
+  background:
+    radial-gradient(circle at 8% 60%, #E85C9E 0 5px, transparent 6px),
+    radial-gradient(circle at 22% 40%, #E85C9E 0 6px, transparent 7px),
+    radial-gradient(circle at 38% 65%, #E85C9E 0 4px, transparent 5px),
+    radial-gradient(circle at 55% 45%, #E85C9E 0 6px, transparent 7px),
+    radial-gradient(circle at 72% 60%, #E85C9E 0 5px, transparent 6px),
+    radial-gradient(circle at 88% 42%, #E85C9E 0 6px, transparent 7px),
+    linear-gradient(180deg,#E85C9E,transparent);
+  opacity:.9;}
+.st-cake-cherry{position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-size:20px;z-index:3;
+  filter:drop-shadow(0 2px 3px rgba(139,42,82,.4));}
+.st-sprinkle{position:absolute;width:5px;height:2.5px;border-radius:2px;z-index:2;}
+
+.st-bow{position:absolute;top:6%;left:50%;transform:translateX(-50%);font-size:56px;
+  transition:transform .6s cubic-bezier(.2,1.4,.3,1),opacity .6s ease;
+  filter:drop-shadow(0 3px 6px rgba(139,42,82,.3));cursor:pointer;z-index:5;}
+.st-bow.untied{transform:translateX(-50%) scale(0) rotate(30deg);opacity:0;pointer-events:none;}
+
+.st-knife{position:absolute;top:2%;left:50%;width:30px;height:132px;transform:translate(-50%,0);
+  z-index:6;opacity:0;pointer-events:none;transition:opacity .4s ease;cursor:grab;}
+.st-knife.show{opacity:1;pointer-events:auto;}
+.st-knife.dragging{cursor:grabbing;transition:none;}
+.st-knife-blade{position:absolute;top:0;left:50%;width:22px;height:82px;transform:translateX(-50%);
+  background:linear-gradient(90deg,#9AA6B0 0%,#E4EBF0 22%,#FBFDFF 42%,#FFFFFF 50%,#E4EBF0 58%,#AEB8C1 78%,#7E8A93 100%);
+  clip-path:polygon(50% 0%, 100% 30%, 88% 100%, 12% 100%, 0% 30%);
+  box-shadow:0 2px 8px rgba(0,0,0,.3);}
+.st-knife-blade::after{content:'';position:absolute;top:8%;left:47%;width:2px;height:80%;
+  background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,.3));}
+.st-knife-bolster{position:absolute;top:80px;left:50%;width:24px;height:9px;transform:translateX(-50%);
+  background:linear-gradient(180deg,#F0D9A8,#C9A45C 55%,#8F6E38);border-radius:3px;
+  box-shadow:0 2px 4px rgba(0,0,0,.35);}
+.st-knife-handle{position:absolute;bottom:0;left:50%;width:17px;height:44px;transform:translateX(-50%);
+  background:linear-gradient(180deg,#5C3A20,#3E2712 60%,#2A1A0C);border-radius:4px 4px 8px 8px;
+  box-shadow:0 3px 6px rgba(0,0,0,.4), inset -2px 0 3px rgba(0,0,0,.3), inset 2px 0 2px rgba(180,130,80,.25);}
+.st-knife-handle::after{content:'';position:absolute;top:10px;left:50%;width:3px;height:3px;border-radius:50%;
+  background:rgba(230,200,150,.5);box-shadow:0 12px 0 rgba(230,200,150,.5);transform:translateX(-50%);}
+
+.st-cut-hint{position:absolute;left:50%;bottom:2%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;
+  color:rgba(139,42,82,.55);font-family:'Cormorant Garamond',serif;font-style:italic;opacity:0;transition:opacity .4s ease;white-space:nowrap;}
+.st-cut-hint.show{opacity:1;}
+
+/* Her Tarot Draw */
+.tarot-page{background:linear-gradient(180deg,#2B0D0D 0%,#120505 60%,#1A0C1A 100%);min-height:100vh;padding-bottom:50px;}
+.tarot-hero{padding:50px 24px 10px;text-align:center;}
+.tarot-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(201,165,90,.75);margin-bottom:10px;}
+.tarot-title{font-family:'Great Vibes',cursive;font-size:42px;color:var(--butter);margin-bottom:6px;}
+.tarot-sub{font-size:12px;letter-spacing:1px;color:rgba(255,255,255,.5);font-family:'Cormorant Garamond',serif;font-style:italic;}
+.tarot-deck-wrap{display:flex;justify-content:center;margin:36px 0 18px;perspective:1200px;}
+.tarot-card{position:relative;width:190px;height:290px;cursor:pointer;}
+.tarot-card-inner{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.3,.2,.2,1);transform-style:preserve-3d;}
+.tarot-card.flipped .tarot-card-inner{transform:rotateY(180deg);}
+.tarot-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;box-shadow:0 10px 34px rgba(0,0,0,.5);}
+.tarot-back{background:
+    repeating-linear-gradient(45deg,rgba(201,165,90,.12) 0 2px,transparent 2px 14px),
+    linear-gradient(160deg,#3D0A0A,#1A0505);
+  border:2px solid rgba(201,165,90,.45);}
+.tarot-back-sym{font-size:38px;color:var(--butter);margin-bottom:14px;}
+.tarot-back-txt{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:rgba(245,230,163,.7);}
+.tarot-front{transform:rotateY(180deg);background:linear-gradient(160deg,#FBF3E3,#F0E0C0);border:2px solid rgba(146,94,58,.5);}
+.tarot-front-icon{font-size:34px;margin-bottom:10px;}
+.tarot-front-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:#5C1A1A;margin-bottom:10px;}
+.tarot-front-meaning{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:#7A5C42;line-height:1.5;}
+.tarot-hint{text-align:center;font-size:12px;color:rgba(255,255,255,.4);font-style:italic;font-family:'Cormorant Garamond',serif;margin-top:6px;}
+.tarot-progress{text-align:center;font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.4);text-transform:uppercase;margin-top:18px;}
+.tarot-reset{display:block;width:fit-content;margin:16px auto 0;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(201,165,90,.75);border:1px solid rgba(201,165,90,.4);border-radius:20px;padding:8px 18px;cursor:pointer;}
+
+/* The Tide of Her */
+.tide-page{background:linear-gradient(180deg,#F5C99B 0%,#E8935C 20%,#8B4A3C 38%,#3D1A2C 58%,#150A18 100%);min-height:100vh;padding-bottom:50px;position:relative;overflow:hidden;}
+.tide-hero{padding:50px 24px 6px;text-align:center;position:relative;z-index:2;}
+.tide-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(201,165,90,.8);margin-bottom:10px;}
+.tide-title{font-family:'Great Vibes',cursive;font-size:42px;color:var(--butter);margin-bottom:6px;}
+.tide-sub{font-size:12px;letter-spacing:1px;color:rgba(255,255,255,.55);font-family:'Cormorant Garamond',serif;font-style:italic;}
+.tide-ocean{position:relative;height:220px;margin-top:24px;overflow:hidden;cursor:pointer;}
+.wave{position:absolute;bottom:-30px;left:-50%;width:220%;height:120px;border-radius:44% 44% 0 0;opacity:.8;}
+.wave1{background:linear-gradient(180deg,rgba(120,190,170,.5),rgba(20,55,60,.85));animation:waveMove 9s linear infinite;}
+.wave2{background:linear-gradient(180deg,rgba(90,160,150,.45),rgba(15,45,50,.9));bottom:-45px;height:130px;animation:waveMove2 7s linear infinite;opacity:.7;}
+.wave3{background:linear-gradient(180deg,rgba(60,130,125,.5),rgba(10,35,42,.95));bottom:-60px;height:140px;animation:waveMove 11s linear infinite reverse;opacity:.6;}
+@keyframes waveMove{0%{transform:translateX(0);}100%{transform:translateX(25%);}}
+@keyframes waveMove2{0%{transform:translateX(0);}100%{transform:translateX(-25%);}}
+.tide-sun{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,224,150,.95),rgba(255,190,100,.5) 55%,transparent 75%);
+  box-shadow:0 0 40px rgba(255,200,110,.55),0 0 80px rgba(255,170,90,.3);
+  animation:sunGlow 4s ease-in-out infinite;}
+@keyframes sunGlow{0%,100%{opacity:.85;}50%{opacity:1;}}
+.tide-boat{position:absolute;bottom:64px;left:38%;font-size:26px;z-index:2;
+  animation:boatBob 3.2s ease-in-out infinite;filter:drop-shadow(0 3px 6px rgba(0,0,0,.4));}
+@keyframes boatBob{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-6px) rotate(3deg);}}
+.tide-treasure{position:absolute;left:50%;bottom:60px;transform:translate(-50%,20px);font-size:40px;opacity:0;transition:transform .6s cubic-bezier(.2,1.4,.4,1),opacity .6s ease;z-index:3;pointer-events:none;}
+.tide-treasure.show{opacity:1;transform:translate(-50%,-10px);}
+.tide-hint{text-align:center;font-size:12px;color:rgba(255,255,255,.55);font-style:italic;font-family:'Cormorant Garamond',serif;margin-top:10px;position:relative;z-index:2;}
+.tide-reveal{margin:14px 20px 0;min-height:64px;background:rgba(255,255,255,.08);border:1px solid rgba(201,165,90,.3);border-radius:16px;padding:16px 20px;position:relative;z-index:2;backdrop-filter:blur(6px);text-align:center;}
+.tide-reveal-name{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:var(--butter);margin-bottom:4px;}
+.tide-reveal-text{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:rgba(255,255,255,.8);line-height:1.5;}
+.tide-progress{text-align:center;font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.4);text-transform:uppercase;margin-top:16px;position:relative;z-index:2;}
+.tide-reset{display:block;width:fit-content;margin:14px auto 0;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(201,165,90,.85);border:1px solid rgba(201,165,90,.45);border-radius:20px;padding:8px 18px;cursor:pointer;position:relative;z-index:2;}
+
+/* The Northern Lights */
+.aurora-page{background:linear-gradient(180deg,#050810 0%,#0A0E1F 40%,#0D0A18 100%);min-height:100vh;padding-bottom:50px;position:relative;overflow:hidden;}
+.aurora-hero{padding:50px 24px 6px;text-align:center;position:relative;z-index:3;}
+.aurora-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(201,165,90,.75);margin-bottom:10px;}
+.aurora-title{font-family:'Great Vibes',cursive;font-size:42px;color:var(--butter);margin-bottom:6px;}
+.aurora-sub{font-size:12px;letter-spacing:1px;color:rgba(255,255,255,.5);font-family:'Cormorant Garamond',serif;font-style:italic;}
+.aurora-field{position:relative;height:320px;margin:16px 10px 0;overflow:hidden;border-radius:18px;cursor:pointer;
+  background:radial-gradient(ellipse at 50% 30%,#0A0F1C 0%,#050810 55%,#020408 100%);}
+.aurora-ribbon{position:absolute;top:0;left:0;width:220%;height:80%;filter:blur(20px);opacity:.6;border-radius:45%;}
+.ar1{top:-8%;background:linear-gradient(100deg,transparent,rgba(60,220,170,.65),rgba(120,90,220,.5),rgba(60,220,170,.55),transparent);animation:auroraFlow1 13s linear infinite;}
+.ar2{top:6%;background:linear-gradient(100deg,transparent,rgba(90,200,255,.45),rgba(180,90,220,.55),rgba(90,200,255,.45),transparent);animation:auroraFlow2 17s linear infinite;}
+.ar3{top:20%;background:linear-gradient(100deg,transparent,rgba(60,255,180,.5),rgba(90,140,255,.4),rgba(60,255,180,.45),transparent);animation:auroraFlow3 21s linear infinite;}
+.ar4{top:34%;background:linear-gradient(100deg,transparent,rgba(200,120,255,.4),rgba(80,255,210,.45),rgba(200,120,255,.35),transparent);animation:auroraFlow2 15s linear infinite reverse;}
+.ar5{top:48%;background:linear-gradient(100deg,transparent,rgba(120,255,200,.35),rgba(150,120,255,.4),rgba(120,255,200,.3),transparent);animation:auroraFlow1 19s linear infinite reverse;}
+@keyframes auroraFlow1{
+  0%{transform:translate(-45%,0) scaleY(1);}
+  25%{transform:translate(-30%,-14px) scaleY(1.15);}
+  50%{transform:translate(-15%,0) scaleY(1);}
+  75%{transform:translate(-5%,12px) scaleY(1.1);}
+  100%{transform:translate(0%,0) scaleY(1);}
+}
+@keyframes auroraFlow2{
+  0%{transform:translate(0%,0) scaleY(1);}
+  25%{transform:translate(-12%,10px) scaleY(1.1);}
+  50%{transform:translate(-25%,0) scaleY(1);}
+  75%{transform:translate(-36%,-12px) scaleY(1.18);}
+  100%{transform:translate(-45%,0) scaleY(1);}
+}
+@keyframes auroraFlow3{
+  0%{transform:translate(0%,0) scaleY(1);}
+  25%{transform:translate(15%,-10px) scaleY(1.12);}
+  50%{transform:translate(30%,0) scaleY(1);}
+  75%{transform:translate(40%,10px) scaleY(1.08);}
+  100%{transform:translate(45%,0) scaleY(1);}
+}
+.aurora-star{position:absolute;background:#fff;border-radius:50%;opacity:.6;animation:twinkle 3s ease-in-out infinite;}
+.aurora-hint{text-align:center;font-size:12px;color:rgba(255,255,255,.5);font-style:italic;font-family:'Cormorant Garamond',serif;margin-top:14px;position:relative;z-index:3;}
+.falling-star{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;
+  box-shadow:0 0 6px 2px rgba(255,255,255,.9);opacity:0;z-index:1;pointer-events:none;}
+.falling-star.fly{animation:shootAcross 1.3s ease-out forwards;}
+.falling-star::before{content:'';position:absolute;top:50%;right:0;width:70px;height:1.5px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.8));transform:translateY(-50%);}
+@keyframes shootAcross{0%{opacity:0;transform:translate(0,0);}8%{opacity:1;}88%{opacity:1;}100%{opacity:0;transform:translate(var(--dx,320px),var(--dy,160px));}}
+.aurora-reveal{margin:16px 20px 0;min-height:64px;background:rgba(255,255,255,.06);border:1px solid rgba(201,165,90,.25);border-radius:16px;padding:16px 20px;position:relative;z-index:3;backdrop-filter:blur(6px);text-align:center;opacity:0;max-height:0;overflow:hidden;transition:opacity .6s ease;}
+.aurora-reveal.show{opacity:1;max-height:200px;}
+.aurora-reveal-text{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--butter);line-height:1.6;}
+
+/* Just Ours - bougainvillea wall & pathway */
+.bougain-page{background:linear-gradient(180deg,#FDF6EC 0%,#FBEFDD 55%,#F6E4CC 100%);min-height:100vh;padding-bottom:50px;}
+.bougain-hero{padding:50px 24px 6px;text-align:center;}
+.bougain-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#B08968;margin-bottom:10px;}
+.bougain-title{font-family:'Great Vibes',cursive;font-size:clamp(32px,9vw,42px);color:#6B1E3C;margin-bottom:6px;padding:0 12px;line-height:1.15;}
+.bougain-sub{font-size:12px;letter-spacing:1px;color:#9A7A70;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.bougain-scene{position:relative;height:440px;margin:20px 12px 0;cursor:pointer;overflow:hidden;border-radius:16px;
+  background:linear-gradient(180deg,#C9E0F2 0%,#DCEAF4 16%,#D8C6A0 16%,#C7AE7E 76%,#A99260 76%,#9C8656 100%);
+  box-shadow:inset 0 0 60px rgba(0,0,0,.18);}
+/* Side lighting across the wall for depth, warm light from upper-left */
+.bg-wall-shadow{position:absolute;left:0;top:16%;width:100%;height:62%;
+  background:linear-gradient(100deg,rgba(255,244,214,.25) 0%,transparent 30%,rgba(0,0,0,.16) 78%,rgba(0,0,0,.32) 100%);}
+/* Pathway rendered as a receding trapezoid for real perspective, like it vanishes into distance */
+.bg-path{position:absolute;left:0;right:0;bottom:0;height:24%;
+  background:linear-gradient(180deg,#CBBB90 0%,#B7A574 55%,#8F7A4C 100%);
+  clip-path:polygon(38% 0%, 62% 0%, 100% 100%, 0% 100%);}
+.bg-path-texture{position:absolute;left:0;right:0;bottom:0;height:24%;opacity:.35;
+  background:repeating-linear-gradient(180deg,transparent 0 3px,rgba(0,0,0,.12) 3px 4px);
+  clip-path:polygon(38% 0%, 62% 0%, 100% 100%, 0% 100%);}
+.bg-path-line{position:absolute;left:48.2%;bottom:0;width:3.6%;height:24%;background:#E8C84A;opacity:.75;
+  clip-path:polygon(42% 0%, 58% 0%, 100% 100%, 0% 100%);}
+.bg-horizon-glow{position:absolute;left:30%;right:30%;top:14%;height:10%;
+  background:radial-gradient(ellipse at 50% 0%,rgba(255,244,214,.45),transparent 75%);}
+.bg-flower{position:absolute;border-radius:0% 100% 0% 100%;transform-origin:center;
+  transform:scale(0) rotate(var(--r,0deg));opacity:0;
+  transition:transform .8s cubic-bezier(.2,1.4,.3,1),opacity .8s ease;
+  filter:drop-shadow(1px 2px 1.5px rgba(80,10,40,.35));}
+.bg-flower.bloom{transform:scale(1) rotate(var(--r,0deg));opacity:1;}
+.bg-leaf{position:absolute;background:linear-gradient(160deg,#6B9C5A,#3D6636);border-radius:0% 70% 0% 70%;
+  opacity:0;transform:scale(0) rotate(var(--r,0deg));transition:transform .8s cubic-bezier(.2,1.4,.3,1),opacity .8s ease;
+  filter:drop-shadow(1px 2px 1.5px rgba(30,40,10,.3));}
+.bg-leaf.bloom{opacity:.85;transform:scale(1) rotate(var(--r,0deg));}
+.bg-petal-fallen{position:absolute;border-radius:0% 100% 0% 100%;opacity:0;
+  transform:scale(0) rotate(var(--r,0deg));transition:transform .7s ease,opacity .7s ease;
+  filter:drop-shadow(0 1px 1px rgba(0,0,0,.25));}
+.bg-petal-fallen.bloom{opacity:.9;transform:scale(1) rotate(var(--r,0deg));}
+
+/* A small tree growing against the wall, on the right side */
+.bg-tree-trunk{position:absolute;bottom:22%;background:linear-gradient(90deg,#3D2A16,#5C4020 45%,#3D2A16);
+  border-radius:40% 40% 4px 4px;z-index:1;box-shadow:1px 0 3px rgba(0,0,0,.3);}
+.bg-tree-branch{position:absolute;background:linear-gradient(90deg,#3D2A16,#5C4020);border-radius:30px;
+  transform-origin:0% 50%;z-index:1;box-shadow:1px 1px 2px rgba(0,0,0,.25);}
+
+/* Continuously falling petals drifting from the wall down onto the path */
+.falling-petal{position:absolute;top:-4%;border-radius:0% 100% 0% 100%;opacity:0;pointer-events:none;z-index:2;
+  filter:drop-shadow(0 1px 1px rgba(0,0,0,.2));}
+.falling-petal.drift{animation:petalDrift linear forwards;}
+@keyframes petalDrift{
+  0%{opacity:0;transform:translate(0,0) rotate(0deg);}
+  8%{opacity:.95;}
+  90%{opacity:.9;}
+  100%{opacity:0;transform:translate(var(--dx,20px),420px) rotate(var(--rr,360deg));}
+}
+.bougain-hint{text-align:center;font-size:12px;color:#9A7A70;font-style:italic;font-family:'Cormorant Garamond',serif;margin-top:12px;}
+.bougain-line{margin:18px 30px 0;text-align:center;font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;
+  color:#6B1E3C;line-height:1.6;opacity:0;transition:opacity 1.4s ease;}
+.bougain-line.show{opacity:1;}
+.bougain-line2{margin:14px 30px 0;text-align:center;font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;
+  color:#9A6B7C;line-height:1.6;opacity:0;transition:opacity 1.6s ease;}
+.bougain-line2.show{opacity:1;}
+
+/* ===== Desktop / laptop view (e.g. MacBook) =====
+   The site is designed mobile-first as a single narrow column. On wider screens
+   we let the colored sections stretch full width so it fills the whole browser
+   window, while grids/cards inside get a comfortable max-width so they don't
+   stretch into awkward oversized shapes. */
+@media (min-width:701px){
+  body{max-width:100%;}
+  .bnav{max-width:100%;}
+  .home-hero,.bday-hero,.almanac-hero,.sky-hero,.shows-hero{padding-left:6vw;padding-right:6vw;}
+  .almanac-body,.shows-body{padding-left:6vw;padding-right:6vw;}
+  .almanac-card,.rings-wrap,.explore-more,.cake-wrap,.bday-wish-card,.show-grid,.const-complete,.sky-reveal,.const-progress,.moon-info{
+    max-width:520px;margin-left:auto;margin-right:auto;
+  }
+  .bday-wish-card,.explore-more{margin-left:auto;margin-right:auto;}
+  .home-cards,.home-tagline,.home-tag,.home-name{max-width:520px;margin-left:auto;margin-right:auto;}
+}
+@media (min-width:1000px){
+  .almanac-card,.rings-wrap,.explore-more,.cake-wrap,.bday-wish-card,.show-grid,.const-complete{
+    max-width:600px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="app">
+  <div class="page active" id="pageHome">
+    <section class="home-hero">
+      <div class="home-hero-bg"></div>
+      <div class="home-fall-emoji" style="left:23%;animation-duration:5.5s;animation-delay:0s">🌸</div>
+      <div class="home-fall-emoji" style="left:50%;animation-duration:6.5s;animation-delay:1.5s">🧿</div>
+      <div class="home-fall-emoji" style="left:77%;animation-duration:5s;animation-delay:3s">🍁</div>
+      <div class="home-tag">✦ A birthday page made with love for ✦</div>
+      <div class="home-name">My Rose</div>
+      <div class="home-tagline">Happy birthday to my favourite person in the world</div>
+      <div class="home-cards">
+        <div class="home-pill">12 September 2026</div>
+        <div class="home-pill">Forever Yours</div>
+      </div>
+      <div class="home-scroll-hint">
+        <span>Explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+    <div class="quote-band reveal">
+      <p>"If beauty had a voice, it would probably sound like yours."</p>
+      <p>"I used to think the moon was beautiful... until I saw the way your eyes steal the light from it."</p>
+      <p>"I used to believe poetry was written in books, until your smile turned every ordinary moment into a verse."</p>
+      <p>"They say perfection doesn't exist. Maybe they're right but every time you laugh, the world forgets its own flaws."</p>
+      <p>"If I had one wish, it wouldn't be to stop time. It would be... to spend every second of it looking at you ❤️"</p>
+      <cite>✦ Written for Rose ✦</cite>
+    </div>
+    <div style="padding:32px 20px 0;">
+      <div class="pcard pcard-birthday" onclick="switchPage('birthday')">
+        <div class="pcard-content" style="display:flex;align-items:center;gap:14px;">
+          <div style="font-size:32px;">🎂</div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--butter);">Happy Birthday, Rose</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.75);margin-top:2px;">Countdown, cake & wishes →</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div class="pcard pcard-memories" onclick="switchPage('memories')">
+          <div class="pcard-content">
+            <div style="font-size:30px;margin-bottom:10px;">📷</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--dark-brown);">Memories</div>
+            <div style="font-size:11px;color:#9A7A70;margin-top:3px;">Our photo wall</div>
+          </div>
+        </div>
+        <div class="pcard pcard-letters" onclick="switchPage('letters')">
+          <div class="pcard-content">
+            <div style="font-size:30px;margin-bottom:10px;">💌</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--butter);">Letters</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:3px;">Words from my heart</div>
+          </div>
+        </div>
+        <div class="pcard pcard-songs" onclick="switchPage('music')">
+          <div class="pcard-content">
+            <div style="font-size:30px;margin-bottom:10px;">🎵</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--butter);">Her Anthem</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:3px;">Music player</div>
+          </div>
+        </div>
+        <div class="pcard pcard-whyyou" onclick="switchPage('memories')">
+          <div class="pcard-content">
+            <div style="font-size:30px;margin-bottom:10px;">💛</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--dark-brown);">Why I Love You</div>
+            <div style="font-size:11px;color:#9A7A70;margin-top:3px;">All my reasons</div>
+          </div>
+        </div>
+      </div>
+      <div onclick="switchPage('discover')" style="margin-top:12px;background:linear-gradient(135deg,#3D1A2C,#6B1E3C);border-radius:20px;padding:20px 18px;cursor:pointer;box-shadow:0 4px 20px rgba(107,30,60,.25);">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="font-size:28px;">✦</div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--butter);">Explore Her World</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:2px;">Almanac, tarot, the night sky & more →</div>
+          </div>
+        </div>
+      </div>
+      <div class="home-video-section">
+        <div class="home-video-tag">✦ made for her ✦</div>
+        <div class="home-video-title">A Little Cinema</div>
+        <div class="home-video-item">
+          <video id="homeVideo1" controls playsinline preload="metadata"></video>
+          <div class="home-video-caption">a Wall-E edit, just for you 🤍</div>
+        </div>
+        <div class="home-video-item">
+          <video id="homeVideo2" controls playsinline preload="metadata"></video>
+          <div class="home-video-caption">this one reminded me of us 🎬</div>
+        </div>
+      </div>
+      <div class="home-photo-card">
+        <img src="" alt="">
+      </div>
+    </div>
+    <div style="text-align:center;padding:36px 28px 0;">
+      <div style="font-family:'Great Vibes',cursive;font-size:42px;color:var(--maroon)">Always & Forever</div>
+      <div style="font-size:12px;color:#9A7A70;letter-spacing:2px;margin-top:4px;">🌹 Ranjeet Singh 🌹</div>
+    </div>
+  </div>
+
+  <div class="page" id="pageBirthday">
+    <section class="bday-hero">
+      <div class="bday-hero-bg"></div>
+      <div class="bday-stars" id="bdayStars"></div>
+      <div class="bday-tag">✦ Happy Birthday ✦</div>
+      <div class="bday-title">Rose Garg</div>
+      <div class="countdown-row" id="countdownRow">
+        <div class="cd-box"><div class="cd-num" id="cdDays">00</div><div class="cd-lbl">Days</div></div>
+        <div class="cd-box"><div class="cd-num" id="cdHours">00</div><div class="cd-lbl">Hours</div></div>
+        <div class="cd-box"><div class="cd-num" id="cdMins">00</div><div class="cd-lbl">Mins</div></div>
+        <div class="cd-box"><div class="cd-num" id="cdSecs">00</div><div class="cd-lbl">Secs</div></div>
+      </div>
+      <div class="cd-done" id="cdDone" style="display:none;">🎉 It's Her Day! 🎉</div>
+    </section>
+    <div class="cake-wrap reveal">
+      <div class="cake-hint">tap the candles to blow them out ✦ make a wish</div>
+      <div class="mic-blow-wrap">
+        <button class="mic-btn" id="micBtn" onclick="enableMicBlow()">🎤 or blow into your mic</button>
+      </div>
+      <div class="cake">
+        <div class="cake-candles" id="cakeCandles">
+          <div class="candle" onclick="blowCandle(this)"><span class="flame">🔥</span></div>
+          <div class="candle" onclick="blowCandle(this)"><span class="flame">🔥</span></div>
+          <div class="candle" onclick="blowCandle(this)"><span class="flame">🔥</span></div>
+        </div>
+        <div class="cake-tier top"><div class="cake-drip"></div></div>
+        <div class="cake-tier bottom"></div>
+        <div class="cake-shadow"></div>
+        <div class="cake-plate"></div>
+      </div>
+      <div class="cake-msg" id="cakeMsg">May every wish you make come true, my Rose 🌹</div>
+    </div>
+    <div class="bday-wish-card reveal">
+      <div class="bday-wish-title">To My Rose, on Her Day</div>
+      <div class="bday-wish-body">
+        Another year of you in this world means another year of it being a softer, warmer, more beautiful place.<br><br>
+        I hope this year brings you every strawberry shake, every fast drive with the wind in your hair, every quiet joy and every loud laugh you deserve.<br><br>
+        Happy Birthday, Rose. Here's to more candles, more wishes, and forever with you. 🎂🌹
+      </div>
+    </div>
+    <div class="bday-video-card reveal">
+      <div class="bday-video-tag">✦ made just for you ✦</div>
+      <div class="bday-video-title">One More Thing</div>
+      <div class="bday-video-wrap">
+        <video id="bdayVideo" controls playsinline preload="metadata"></video>
+      </div>
+      <div class="bday-video-caption">tap play, my Rose 🌹</div>
+    </div>
+  </div>
+
+  <div class="page" id="pageDiscover">
+    <div class="mem-header">
+      <div class="page-label">More of Her</div>
+      <div class="page-title">Baddie <em>Chronicles</em></div>
+      <div class="page-sub">Little worlds, made just for her.</div>
+    </div>
+    <div class="explore-more reveal" id="discoverSection">
+      <div class="explore-card" onclick="switchPage('almanac')">
+        <div class="explore-icon">📜</div>
+        <div class="explore-text">
+          <div class="explore-title">The Rose Almanac</div>
+          <div class="explore-sub">Her birthstone, birth flower & 19 years of growth →</div>
+        </div>
+      </div>
+      <div class="explore-card" onclick="switchPage('sky')">
+        <div class="explore-icon">🌙</div>
+        <div class="explore-text">
+          <div class="explore-title">Her Sky, That Night</div>
+          <div class="explore-sub">What the sky looked like the night she was born →</div>
+        </div>
+      </div>
+      <div class="explore-card" onclick="switchPage('solar')">
+        <div class="explore-icon">☀️</div>
+        <div class="explore-text">
+          <div class="explore-title">Her Solar System</div>
+          <div class="explore-sub">Every planet, one girl →</div>
+        </div>
+      </div>
+      <div class="explore-card" onclick="switchPage('shows')">
+        <div class="explore-icon">📺</div>
+        <div class="explore-text">
+          <div class="explore-title">Her Comfort Universe</div>
+          <div class="explore-sub">The shows she keeps going back to →</div>
+        </div>
+      </div>
+      <div class="explore-card" onclick="switchPage('tarot')">
+        <div class="explore-icon">🔮</div>
+        <div class="explore-text">
+          <div class="explore-title">Her Tarot Draw</div>
+          <div class="explore-sub">Tap the deck, see what it reveals →</div>
+        </div>
+      </div>
+      <div class="explore-card" onclick="switchPage('tide')">
+        <div class="explore-icon">🌊</div>
+        <div class="explore-text">
+          <div class="explore-title">The Tide of Her</div>
+          <div class="explore-sub">Tap the shore, see what washes up →</div>
+        </div>
+      </div>
+      <div class="explore-card" onclick="switchPage('aurora')">
+        <div class="explore-icon">🌌</div>
+        <div class="explore-text">
+          <div class="explore-title">The Northern Lights</div>
+          <div class="explore-sub">Tap the sky, catch a shooting star →</div>
+        </div>
+      </div>
+      <div class="explore-card" onclick="switchPage('bougain')">
+        <div class="explore-icon">🌺</div>
+        <div class="explore-text">
+          <div class="explore-title">Where He Still Lives</div>
+          <div class="explore-sub">Tap the branch, let it bloom →</div>
+        </div>
+      </div>
+      <div class="explore-card" onclick="switchPage('sealed')">
+        <div class="explore-icon">🔒</div>
+        <div class="explore-text">
+          <div class="explore-title">A Letter, Locked</div>
+          <div class="explore-sub">Sealed until the anniversary of us →</div>
+        </div>
+      </div>
+      <div class="explore-card" onclick="switchPage('quietmagic')">
+        <div class="explore-icon">🦋</div>
+        <div class="explore-text">
+          <div class="explore-title">Her Quiet Magic</div>
+          <div class="explore-sub">Tap the window, watch it land →</div>
+        </div>
+      </div>
+      <div class="explore-card" onclick="switchPage('dreamcity')">
+        <div class="explore-icon">🏰</div>
+        <div class="explore-text">
+          <div class="explore-title">Her Dream City</div>
+          <div class="explore-sub">Tap the sun, let night fall →</div>
+        </div>
+      </div>
+      <div class="explore-card" onclick="switchPage('sweetthings')">
+        <div class="explore-icon">🎀</div>
+        <div class="explore-text">
+          <div class="explore-title">Her Sweetest Things</div>
+          <div class="explore-sub">Tap the bow, untie it →</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;padding:30px 28px 0;">
+      <div style="font-family:'Noto Serif Devanagari',serif;font-size:17px;font-style:italic;color:#8B5A3C;line-height:1.9;max-width:320px;margin:0 auto;">मेरा हृदय सदा तुम्हें समर्पित रहेगा, तुम मेरा अंतिम नहीं, अनंत प्रेम हो!</div>
+    </div>
+    <div style="text-align:center;padding:20px 28px 40px;">
+      <div style="font-family:'Great Vibes',cursive;font-size:42px;color:var(--maroon)">Always & Forever</div>
+      <div style="font-size:12px;color:#9A7A70;letter-spacing:2px;margin-top:4px;">🌹 Ranjeet Singh 🌹</div>
+    </div>
+  </div>
+
+  <div class="page" id="pageAlmanac">
+    <div class="almanac-hero">
+      <div class="page-back" onclick="switchPage('discover')" style="padding:0 0 16px;">← back</div>
+      <div class="almanac-hero-tag">✦ The Rose Almanac ✦</div>
+      <div class="almanac-hero-title">Rose Garg</div>
+      <div class="almanac-hero-sub">A keepsake page of who she is</div>
+    </div>
+    <div class="almanac-body">
+      <div class="almanac-card reveal">
+        <div class="almanac-row">
+          <div class="almanac-icon">💎</div>
+          <div>
+            <div class="almanac-label">Birthstone</div>
+            <div class="almanac-value">Emerald</div>
+            <div class="almanac-desc">Said to represent growth, renewal, and a calm, quiet strength.</div>
+          </div>
+        </div>
+        <div class="almanac-row">
+          <div class="almanac-icon">🌼</div>
+          <div>
+            <div class="almanac-label">Birth Flower</div>
+            <div class="almanac-value">Aster & Morning Glory</div>
+            <div class="almanac-desc">The Aster stands for love and patience; the Morning Glory, for a love that renews itself each day.</div>
+          </div>
+        </div>
+        <div class="almanac-row">
+          <div class="almanac-icon">♉</div>
+          <div>
+            <div class="almanac-label">Zodiac</div>
+            <div class="almanac-value">Taurus</div>
+            <div class="almanac-desc">Patient, loyal, grounded — a Taurus loves steadily, and loves beauty and comfort just as deeply.</div>
+          </div>
+        </div>
+        <div class="almanac-row">
+          <div class="almanac-icon">☿</div>
+          <div>
+            <div class="almanac-label">Ruling Planet</div>
+            <div class="almanac-value">Mercury</div>
+            <div class="almanac-desc">The planet of the mind — sharp, expressive, always thinking a step ahead.</div>
+          </div>
+        </div>
+        <div class="almanac-row">
+          <div class="almanac-icon">🌍</div>
+          <div>
+            <div class="almanac-label">Element</div>
+            <div class="almanac-value">Earth</div>
+            <div class="almanac-desc">Grounded, steady, real — the kind of person you can build something lasting with.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rings-wrap reveal">
+        <div class="rings-title">19 Growth Rings</div>
+        <div class="rings-sub">tap a year to see what it holds</div>
+        <div class="rings-scroll" id="ringsScroll"></div>
+        <div class="ring-reveal" id="ringReveal">
+          <div class="ring-reveal-year">tap a ring above</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="pageSky">
+    <div class="sky-page">
+      <div class="page-back" onclick="switchPage('discover')">← back</div>
+      <div class="sky-hero">
+        <div class="sky-tag">✦ Her Sky, That Night ✦</div>
+        <div class="sky-title">12 September 2006</div>
+        <div class="sky-date">Somewhere, the sky looked like this</div>
+      </div>
+      <div class="sky-field" id="skyField">
+        <div class="moon-el">🌔</div>
+      </div>
+      <div class="sky-reveal" id="skyReveal">
+        <div class="sky-reveal-hint">tap a star ✦</div>
+      </div>
+      <div class="moon-info">Waning Gibbous Moon · ~68% illuminated</div>
+    </div>
+  </div>
+
+  <div class="page" id="pageSolar">
+    <div class="sky-page">
+      <div class="page-back" onclick="switchPage('discover')">← back</div>
+      <div class="sky-hero">
+        <div class="sky-tag">✦ Her Solar System ✦</div>
+        <div class="sky-title">Every Planet, One Girl</div>
+        <div class="sky-date">tap the sun and each planet</div>
+      </div>
+      <div class="solar-field" id="solarField">
+        <div class="sun" id="sunEl" onclick="tapSolar('sun')">☀️</div>
+      </div>
+      <div class="const-progress" id="solarProgress">0 / 9 discovered</div>
+      <div class="sky-reveal" id="solarReveal">
+        <div class="sky-reveal-hint">tap the sun or a planet ✦</div>
+      </div>
+      <div class="const-complete" id="solarComplete">
+        <div class="const-complete-title">Every planet, one girl</div>
+        <div class="const-complete-sub">hot as the sun · clever as mercury · beautiful as venus<br>full of life as earth · aggressive as mars · massive heart like jupiter<br>cold as saturn · unpredictable as uranus · mysterious as neptune</div>
+        <div class="const-reset" onclick="resetSolar()">explore again</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="pageShows">
+    <div class="shows-hero">
+      <div class="page-back" onclick="switchPage('discover')" style="padding:0 0 16px;">← back</div>
+      <div class="shows-hero-tag">✦ Her Comfort Universe ✦</div>
+      <div class="shows-hero-title">Her Shelf of Shows</div>
+      <div class="shows-hero-sub">the ones she keeps going back to</div>
+    </div>
+    <div class="shows-body">
+      <div class="shows-section-title">✦ Shows She Keeps Rewatching</div>
+      <div class="show-grid" id="showGrid"></div>
+      <div class="shows-section-title">✦ Her Comfort Movies</div>
+      <div class="show-grid" id="movieGrid"></div>
+    </div>
+  </div>
+
+  <div class="page" id="pageTarot">
+    <div class="tarot-page">
+      <div class="page-back" onclick="switchPage('discover')">← back</div>
+      <div class="tarot-hero">
+        <div class="tarot-tag">✦ Her Tarot Draw ✦</div>
+        <div class="tarot-title">Draw a Card</div>
+        <div class="tarot-sub">tap the deck, see what it reveals about her</div>
+      </div>
+      <div class="tarot-deck-wrap">
+        <div class="tarot-card" id="tarotCard" onclick="drawTarot()">
+          <div class="tarot-card-inner">
+            <div class="tarot-face tarot-back">
+              <div class="tarot-back-sym">✦</div>
+              <div class="tarot-back-txt">tap to draw</div>
+            </div>
+            <div class="tarot-face tarot-front" id="tarotFront"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tarot-hint" id="tarotHint">tap the card to draw</div>
+      <div class="tarot-progress" id="tarotProgress">0 / 7 cards drawn</div>
+      <div class="tarot-reset" id="tarotReset" onclick="resetTarot()" style="display:none;">reshuffle the deck</div>
+    </div>
+  </div>
+
+  <div class="page" id="pageTide">
+    <div class="tide-page">
+      <div class="page-back" onclick="switchPage('discover')" style="color:rgba(92,26,26,.8);">← back</div>
+      <div class="tide-hero">
+        <div class="tide-tag">✦ The Tide of Her ✦</div>
+        <div class="tide-title">What Washes Up</div>
+        <div class="tide-sub">tap the shore, see what it brings in</div>
+      </div>
+      <div class="tide-ocean" id="tideOcean" onclick="drawTide()">
+        <div class="tide-sun"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave2"></div>
+        <div class="tide-boat">⛵</div>
+        <div class="wave wave1"></div>
+        <div class="tide-treasure" id="tideTreasure">🐚</div>
+      </div>
+      <div class="tide-hint" id="tideHint">tap the water ✦</div>
+      <div class="tide-reveal" id="tideReveal" style="display:none;">
+        <div class="tide-reveal-name" id="tideRevealName"></div>
+        <div class="tide-reveal-text" id="tideRevealText"></div>
+      </div>
+      <div class="tide-progress" id="tideProgress">0 / 7 found</div>
+      <div class="tide-reset" id="tideReset" onclick="resetTide()" style="display:none;">let the tide reset</div>
+    </div>
+  </div>
+
+  <div class="page" id="pageAurora">
+    <div class="aurora-page">
+      <div class="page-back" onclick="switchPage('discover')">← back</div>
+      <div class="aurora-hero">
+        <div class="aurora-tag">✦ The Northern Lights ✦</div>
+        <div class="aurora-title">Make a Wish</div>
+        <div class="aurora-sub">wait for a shooting star, make a wish</div>
+      </div>
+      <div class="aurora-field" id="auroraField">
+        <div class="aurora-ribbon ar1"></div>
+        <div class="aurora-ribbon ar2"></div>
+        <div class="aurora-ribbon ar3"></div>
+        <div class="aurora-ribbon ar4"></div>
+        <div class="aurora-ribbon ar5"></div>
+      </div>
+      <div class="aurora-reveal" id="auroraReveal">
+        <div class="aurora-reveal-text" id="auroraRevealText">✦ make a wish ✦</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="pageBougain">
+    <div class="bougain-page">
+      <div class="page-back" onclick="switchPage('discover')" style="color:rgba(107,30,60,.7);">← back</div>
+      <div class="bougain-hero">
+        <div class="bougain-tag">✦ Where He Still Lives ✦</div>
+        <div class="bougain-title">What the Flower Remembers</div>
+        <div class="bougain-sub">tap the wall, let it bloom</div>
+      </div>
+      <div class="bougain-scene" id="bougainScene" onclick="bloomBougain()">
+        <div class="bg-horizon-glow"></div>
+        <div class="bg-wall-shadow"></div>
+        <div class="bg-path"></div>
+        <div class="bg-path-texture"></div>
+        <div class="bg-path-line"></div>
+      </div>
+      <div class="bougain-hint" id="bougainHint">tap to let it bloom</div>
+      <div class="bougain-line" id="bougainLine">Some things stay warm, no matter where they came from.</div>
+      <div class="bougain-line2" id="bougainLine2">Not every memory needs a story — some just need a place to stay.</div>
+    </div>
+  </div>
+
+  <div class="page" id="pageSealed">
+    <div class="sealed-page">
+      <div class="page-back" onclick="switchPage('discover')">← back</div>
+      <div class="sealed-hero">
+        <div class="sealed-tag">✦ A Letter, Locked ✦</div>
+        <div class="sealed-title">Sealed For Her</div>
+        <div class="sealed-sub" id="sealedSub">sealed until the anniversary of us</div>
+      </div>
+
+      <div id="sealedLockedView">
+        <div class="sealed-envelope-wrap">
+          <div class="sealed-envelope">
+            <div class="sealed-back"></div>
+            <div class="sealed-flap"></div>
+            <div class="sealed-wax">🌹</div>
+          </div>
+        </div>
+        <div class="sealed-countdown" id="sealedCountdown">
+          <div class="sealed-cd-box"><div class="sealed-cd-num" id="sldDays">00</div><div class="sealed-cd-lbl">Days</div></div>
+          <div class="sealed-cd-box"><div class="sealed-cd-num" id="sldHours">00</div><div class="sealed-cd-lbl">Hours</div></div>
+          <div class="sealed-cd-box"><div class="sealed-cd-num" id="sldMins">00</div><div class="sealed-cd-lbl">Mins</div></div>
+          <div class="sealed-cd-box"><div class="sealed-cd-num" id="sldSecs">00</div><div class="sealed-cd-lbl">Secs</div></div>
+        </div>
+        <div class="sealed-hint">it opens itself, right on time — no need to check back until then</div>
+      </div>
+
+      <div class="sealed-letter-body" id="sealedLetterBody">
+        <div class="sealed-letter-to">To My Rose</div>
+        <div class="sealed-letter-text">
+          If you're reading this, then time did the one thing I asked it to — it waited. And now here we are, on the other side of a year I sealed away before I even knew how it would end.<br><br>
+          I didn't pick this date by accident. December 31st was never just the last day of a year to me — it's the day you and I became "us," back in 2023. So this isn't only a letter that survived twelve months of waiting. It's a small, quiet anniversary gift, timed to reach you on the exact date it all began.<br><br>
+          I think about that sometimes — how strange it is to write to someone in the future, not knowing exactly who they'll be by the time they read it. But I already know this much: whatever this year gave you, hard or soft, loud or quiet, you carried it the way you carry everything — with more grace than you probably gave yourself credit for.<br><br>
+          I hope there were mornings that felt easy. I hope there was music that made you close your eyes without meaning to, and laughter that surprised you mid-sentence. I hope somewhere in these months, you looked in the mirror on an ordinary day and just — liked what you saw, no reason needed.<br><br>
+          And if some of it was hard — if there were nights that felt heavier than they should have — I hope you still know this, as clearly now as I mean it while writing it: you were never carrying it alone. Not even on the days it felt that way.<br><br>
+          I built this whole little world for you not because you needed proof of how loved you are, but because I wanted you to have a place that was just yours — soft, safe, and entirely without conditions. This letter is the last room in that house. I hope it still feels warm.<br><br>
+          Wherever you are right now, however you're feeling — happy, tired, unsure, at peace — I hope you take a slow breath and let this reach you the way it was meant to: not as an ending, but as a reminder that some things are built to last long after the moment that made them.<br><br>
+          Happy anniversary, my Rose. Here's to the day it started, the years it's survived, and everything the next one gets to be.
+        </div>
+        <div class="sealed-letter-sign">— Ranjeet</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="pageQuietMagic">
+    <div class="scene-page qm-page">
+      <div class="qm-mountains">
+        <div class="qm-mountain far"></div>
+        <div class="qm-mountain near"></div>
+      </div>
+      <div class="qm-moon"></div>
+      <div class="page-back" onclick="switchPage('discover')" style="color:rgba(255,255,255,.75);">← back</div>
+      <div class="scene-hero">
+        <div class="scene-tag">✦ Her Quiet Magic ✦</div>
+        <div class="scene-title">Butterfly in the Rain</div>
+        <div class="scene-sub">tap the window, watch it land</div>
+      </div>
+      <audio id="rainAudio" loop preload="none"></audio>
+      <div class="scene-box qm-window" id="qmWindow" onclick="landButterfly()">
+        <div class="qm-glow"></div>
+        <div class="qm-fog"></div>
+        <div id="qmRain"></div>
+        <div id="qmDrips"></div>
+        <div id="qmPuddles"></div>
+        <div class="qm-flash" id="qmFlash"></div>
+        <svg class="qm-bolt" id="qmBolt" width="40" height="140" viewBox="0 0 40 140" style="left:20%;">
+          <polygon points="20,0 8,55 20,55 4,140 34,48 20,48 30,0" fill="rgba(230,235,255,.9)"/>
+        </svg>
+        <div class="qm-sheen"></div>
+        <div class="qm-hbar"></div>
+        <div class="qm-butterfly" id="qmButterfly">
+          <div class="qmb-shadow"></div>
+          <div class="qmb-antenna"></div>
+          <div class="qmb-wing upper-left"></div>
+          <div class="qmb-wing upper-right"></div>
+          <div class="qmb-wing lower-left"></div>
+          <div class="qmb-wing lower-right"></div>
+          <div class="qmb-body"></div>
+        </div>
+      </div>
+      <div class="qm-sill"></div>
+      <div class="scene-hint" id="qmHint" style="color:rgba(255,255,255,.5);">tap to watch it come in from the rain</div>
+      <div class="scene-reveal" id="qmReveal" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);">
+        <div class="scene-reveal-text" style="color:#F5EEE0;">Soft on the outside, quietly unstoppable underneath — she's always been both the rain and the thing that survives it.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="pageDreamCity">
+    <div class="scene-page dc-page">
+      <div class="page-back" onclick="switchPage('discover')">← back</div>
+
+      <div class="dc-scene">
+        <div class="dc-sky-day"></div>
+        <div class="dc-sky-night"></div>
+
+        <div class="dc-moon-wrap" id="dcMoonWrap" onclick="riseMoon()">
+          <div class="dc-moon-pale"></div>
+          <div class="dc-moon-blood"></div>
+        </div>
+        <div class="dc-bat b1"></div>
+        <div class="dc-bat b2"></div>
+        <div class="dc-fog"></div>
+        <div class="dc-skyline-glow"></div>
+        <div class="dc-skyline"></div>
+        <div class="dc-ground-glow"></div>
+        <div class="dc-vampire" id="dcVampire" style="left:44%;bottom:42%;" onclick="showVampireLine()">
+          <div class="dc-vampire-cape"></div>
+        </div>
+
+        <div class="dc-finial" style="left:16.5%;bottom:39%;"></div>
+        <div class="dc-finial" style="left:39.5%;bottom:37.5%;"></div>
+        <div class="dc-finial" style="left:62.5%;bottom:41%;"></div>
+        <div class="dc-finial" style="left:86.5%;bottom:35%;"></div>
+
+        <div class="dc-rose" style="left:51%;bottom:16%;"></div>
+
+        <div class="dc-window" style="left:28%;bottom:16%;"></div>
+        <div class="dc-window" style="left:31%;bottom:16%;"></div>
+        <div class="dc-window" style="left:74%;bottom:18%;"></div>
+        <div class="dc-window" style="left:77%;bottom:18%;"></div>
+
+        <div class="dc-light" style="left:8%;bottom:16%;"></div>
+        <div class="dc-light" style="left:18%;bottom:22%;"></div>
+        <div class="dc-light" style="left:44%;bottom:20%;"></div>
+        <div class="dc-light" style="left:89%;bottom:20%;"></div>
+      </div>
+
+      <div class="scene-hero">
+        <div class="scene-tag">✦ Her Dream City ✦</div>
+        <div class="scene-title">Somewhere in Edinburgh</div>
+        <div class="dc-hint">tap the sun...</div>
+        <div class="dc-secret-line" id="dcMoonLine">Even vampires fall in love.</div>
+        <div class="dc-vampire-line" id="dcVampireLine">Come in. You never needed an invitation.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="pageSweetThings">
+    <div class="scene-page st-page">
+      <div class="page-back" onclick="switchPage('discover')" style="color:rgba(139,42,82,.7);">← back</div>
+      <div class="scene-hero">
+        <div class="scene-tag">✦ Her Sweetest Things ✦</div>
+        <div class="scene-title">Ribbons & Cake</div>
+        <div class="scene-sub" id="stSub">tap the bow, untie it</div>
+      </div>
+      <div class="st-scene" id="stScene">
+        <div class="st-plate"></div>
+        <div class="st-cake-shadow"></div>
+        <div class="st-cake" id="stCake">
+          <div class="st-cake-half left">
+            <div class="st-tier top"><div class="st-drip"></div><div class="st-cake-cherry">🍒</div>
+              <div class="st-sprinkle" style="top:8px;left:20px;background:#7BC4E8;transform:rotate(20deg);"></div>
+              <div class="st-sprinkle" style="top:16px;left:50px;background:#F7D65C;transform:rotate(-15deg);"></div>
+              <div class="st-sprinkle" style="top:10px;left:80px;background:#8FD98F;transform:rotate(40deg);"></div>
+            </div>
+            <div class="st-tier bottom">
+              <div class="st-sprinkle" style="top:10px;left:14px;background:#F7D65C;transform:rotate(10deg);"></div>
+              <div class="st-sprinkle" style="top:20px;left:60px;background:#7BC4E8;transform:rotate(-20deg);"></div>
+              <div class="st-sprinkle" style="top:14px;left:110px;background:#E88FC4;transform:rotate(30deg);"></div>
+            </div>
+          </div>
+          <div class="st-cake-half right">
+            <div class="st-tier top"><div class="st-drip"></div><div class="st-cake-cherry">🍒</div>
+              <div class="st-sprinkle" style="top:8px;left:20px;background:#7BC4E8;transform:rotate(20deg);"></div>
+              <div class="st-sprinkle" style="top:16px;left:50px;background:#F7D65C;transform:rotate(-15deg);"></div>
+              <div class="st-sprinkle" style="top:10px;left:80px;background:#8FD98F;transform:rotate(40deg);"></div>
+            </div>
+            <div class="st-tier bottom">
+              <div class="st-sprinkle" style="top:10px;left:14px;background:#F7D65C;transform:rotate(10deg);"></div>
+              <div class="st-sprinkle" style="top:20px;left:60px;background:#7BC4E8;transform:rotate(-20deg);"></div>
+              <div class="st-sprinkle" style="top:14px;left:110px;background:#E88FC4;transform:rotate(30deg);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="st-bow" id="stBow" onclick="untieBow()">🎀</div>
+        <div class="st-knife" id="stKnife">
+          <div class="st-knife-blade"></div>
+          <div class="st-knife-bolster"></div>
+          <div class="st-knife-handle"></div>
+        </div>
+        <div class="st-cut-hint" id="stCutHint">drag the knife down through the cake</div>
+      </div>
+      <div class="scene-hint" id="stHint" style="color:#A8607C;">tap to untie</div>
+      <div class="scene-reveal" id="stReveal" style="background:rgba(255,255,255,.55);border:1px solid rgba(139,42,82,.15);">
+        <div class="scene-reveal-text" id="stRevealText" style="color:#8B2A52;">Lace, bows, and something sweet after dinner — she likes her world a little soft, a little indulgent, and entirely unapologetic about it.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="pageMemories">
+    <div class="mem-header">
+      <div class="page-label">Our Story</div>
+      <div class="page-title">Her <em>Gallery</em></div>
+      <div class="page-sub">Every moment of her is a treasure I never want to forget.</div>
+    </div>
+    <div class="mem-grid">
+      <div class="mem-card tall reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#F7D6D0,#FDEBD0)">🌸</div>
+        <div class="mem-overlay"><div class="mem-caption">The day I first smiled because of you</div><div class="mem-date">Always remembered ✦</div></div>
+      </div>
+      <div class="mem-card reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#2C1810,#5C1A1A)">🌹</div>
+        <div class="mem-overlay"><div class="mem-caption">Roses for my Rose</div><div class="mem-date">Every single day ✦</div></div>
+      </div>
+      <div class="mem-card reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#EDD9B2,#F5E6A3)">☀️</div>
+        <div class="mem-overlay"><div class="mem-caption">Golden evenings with you</div><div class="mem-date">Sunshine & love ✦</div></div>
+      </div>
+      <div class="mem-card reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#2D5A3D,#1a3d28)">🌿</div>
+        <div class="mem-overlay"><div class="mem-caption">Our little adventures</div><div class="mem-date">Just us two ✦</div></div>
+      </div>
+      <div class="mem-card reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#E8E0F0,#D4C8E8)">🌙</div>
+        <div class="mem-overlay"><div class="mem-caption">Late night conversations</div><div class="mem-date">Midnight magic ✦</div></div>
+      </div>
+      <div class="mem-card reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#FDEBD0,#F7D6D0)">🍓</div>
+        <div class="mem-overlay"><div class="mem-caption">Strawberry shakes & smiles</div><div class="mem-date">Sweet like you ✦</div></div>
+      </div>
+      <div class="mem-card reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#F5C9D6,#E88FA6)">🎀</div>
+        <div class="mem-overlay"><div class="mem-caption">A memory I'm keeping</div><div class="mem-date">Tap to add yours ✦</div></div>
+      </div>
+      <div class="mem-card tall reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#C9A45C,#8F6E38)">📷</div>
+        <div class="mem-overlay"><div class="mem-caption">A memory I'm keeping</div><div class="mem-date">Tap to add yours ✦</div></div>
+      </div>
+      <div class="mem-card reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#7BC4E8,#4A90C4)">💙</div>
+        <div class="mem-overlay"><div class="mem-caption">A memory I'm keeping</div><div class="mem-date">Tap to add yours ✦</div></div>
+      </div>
+      <div class="mem-card reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#8FD98F,#4E9C5C)">🌱</div>
+        <div class="mem-overlay"><div class="mem-caption">A memory I'm keeping</div><div class="mem-date">Tap to add yours ✦</div></div>
+      </div>
+      <div class="mem-card reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#F0D9A8,#C9A45C)">✨</div>
+        <div class="mem-overlay"><div class="mem-caption">A memory I'm keeping</div><div class="mem-date">Tap to add yours ✦</div></div>
+      </div>
+      <div class="mem-card reveal">
+        <div class="mem-img" style="background:linear-gradient(145deg,#E8B4C8,#B85C7E)">💕</div>
+        <div class="mem-overlay"><div class="mem-caption">A memory I'm keeping</div><div class="mem-date">Tap to add yours ✦</div></div>
+      </div>
+    </div>
+    <div class="mem-add-note reveal"><span>✦ More memories being made every day ✦</span></div>
+
+    <div class="mem-header" style="margin-top:40px;">
+      <div class="page-label">From my heart</div>
+      <div class="page-title">Why I <em>Love</em> You</div>
+      <div class="page-sub">There are infinite reasons. Here are just a few.</div>
+    </div>
+    <div class="reasons-wrap">
+      <div class="reason-card reveal"><div class="reason-num">01</div><div><div class="reason-title">The way you make a room feel different</div><div class="reason-desc">The moment you walk in, something shifts. The air feels warmer. Everything feels more alive. You do not try — you simply are.</div></div></div>
+      <div class="reason-card reveal"><div class="reason-num">02</div><div><div class="reason-title">Your love for speed & freedom</div><div class="reason-desc">The way your eyes light up at a roaring engine, the way you love the feeling of going fast — it mirrors how brave and free your spirit truly is.</div></div></div>
+      <div class="reason-card reveal"><div class="reason-num">03</div><div><div class="reason-title">How beautifully soft you are inside</div><div class="reason-desc">Behind the bold exterior is a girl who loves strawberry shakes, mango ice cream and vanilla custard. Your softness is one of the most beautiful things about you.</div></div></div>
+      <div class="reason-card reveal"><div class="reason-num">04</div><div><div class="reason-title">Your effortless elegance</div><div class="reason-desc">You carry yourself with a grace that feels both ancient and modern — like a woman painted into a European masterpiece, yet entirely, uniquely yourself.</div></div></div>
+      <div class="reason-card reveal"><div class="reason-num">05</div><div><div class="reason-title">The colours you see the world in</div><div class="reason-desc">Pastel pinks, butter yellows, emerald greens, the depth of maroon — your palette tells the story of someone who feels the world deeply and beautifully.</div></div></div>
+      <div class="reason-card reveal"><div class="reason-num">06</div><div><div class="reason-title">The way you are my favourite thought</div><div class="reason-desc">In every quiet moment, in every loud one, you are the thought I return to. Not because I choose to — but because my heart already knows where home is.</div></div></div>
+      <div class="reason-card reveal"><div class="reason-num">07</div><div><div class="reason-title">Simply because you are Rose</div><div class="reason-desc">There is no better reason. No more complete answer. You, exactly as you are, is the reason. You are enough. You are everything.</div></div></div>
+      <div class="reasons-footer reveal">
+        <div class="reasons-footer-title">& a thousand more</div>
+        <div class="reasons-footer-sub">This list could never end.<br>Because loving you has no end.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="pageLetters">
+    <div class="mem-header">
+      <div class="page-label">From my heart</div>
+      <div class="page-title">Love <em>Letters</em></div>
+      <div class="page-sub">Words I mean with every breath.</div>
+    </div>
+    <div class="letter-wrap">
+      <div class="env-cover reveal" id="envLockCover" onclick="openLetterLock()">
+        <div class="env-seal">🌹</div>
+        <div class="env-tag">✦ A Letter, Sealed For You ✦</div>
+        <div class="env-hint">tap the seal to open</div>
+      </div>
+      <div class="letter-card reveal" id="letterCard1" style="display:none;">
+        <div class="letter-seal">🌹</div>
+        <div class="letter-to">To · Rose Garg</div>
+        <div class="letter-salute">My Dearest Rose,</div>
+        <div class="letter-body">
+          There are words I have rehearsed a thousand times in the quiet of my own mind, and yet each time I try to say them to you, they dissolve into something softer — something that feels more like a feeling than a sentence.<br><br>
+          You are not the kind of person the world simply notices. You are the kind of person the world <em>remembers</em>. The way you laugh, freely and without apology. The way your eyes hold an entire story before your lips even part. The way you love the roar of an engine and the softness of a strawberry shake in the same breath — that is your magic, Rose. You are a beautiful contradiction, and I am endlessly in awe of you.<br><br>
+          I do not need a grand occasion to tell you this. I tell you now, on an ordinary day, because ordinary days with you are the most extraordinary thing I have ever known.<br><br>
+          I am yours — completely, quietly, joyfully — yours.
+        </div>
+        <div class="letter-sign">Forever Yours 🌹</div>
+        <div class="letter-date">Written with love · Always</div>
+      </div>
+      <div class="letter2-card reveal">
+        <div class="letter-seal">💛</div>
+        <div class="letter-to" style="color:rgba(201,165,90,.7)">A midnight thought · for Rose</div>
+        <div class="letter-salute" style="font-family:'Great Vibes',cursive;font-size:30px;color:var(--butter)">My favourite thought,</div>
+        <div class="letter-body" style="color:rgba(255,255,255,.75);">
+          At 2 AM when the world goes quiet, my mind finds its way to you — always. Not because I force it, but because you are where warmth lives in my world.<br><br>
+          I hope you know that somewhere, someone thinks the universe made a masterpiece when it made you. That someone is me. It has always been me.<br><br>
+          Sleep well, my Rose. You are so deeply, so tenderly loved.
+        </div>
+        <div class="letter-sign" style="font-family:'Great Vibes',cursive;font-size:26px;color:var(--gold);">Your person 🌙</div>
+        <div class="letter-date" style="color:rgba(255,255,255,.3);">A quiet night · written in love</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lock-modal" id="letterLockModal">
+    <div class="lock-box">
+      <div class="lock-icon">🔒</div>
+      <div class="lock-title">This one's just for you</div>
+      <div class="lock-sub">enter the passcode to open it</div>
+      <input type="password" inputmode="numeric" id="letterLockInput" class="lock-input" placeholder="• • • • • • • •" onkeydown="if(event.key==='Enter')checkLetterLock()">
+      <div class="lock-error" id="letterLockError">that's not quite it, try again 🌹</div>
+      <button class="lock-btn" onclick="checkLetterLock()">Open</button>
+      <div class="lock-close" onclick="closeLetterLock()">not right now</div>
+    </div>
+  </div>
+
+  <div class="page" id="pageMusic">
+    <div class="mem-header">
+      <div class="page-label">Play for us</div>
+      <div class="page-title">Her <em>Anthem</em></div>
+      <div class="page-sub">Every song hits different with her.</div>
+    </div>
+    <div class="music-wrap">
+      <div class="player-card">
+        <audio id="audioPlayer" preload="metadata"></audio>
+        <div class="player-disc-wrap">
+          <div class="player-disc" id="disc">
+            <div class="disc-shine"></div>
+            <div class="disc-label"><span id="discEmoji">🌹</span></div>
+            <div class="disc-center"></div>
+          </div>
+          <div class="player-eq" id="playerEq">
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+          </div>
+        </div>
+        <div class="player-song">
+          <div class="player-song-name" id="songName">Love Story</div>
+          <div class="player-artist" id="songArtist">Indila</div>
+        </div>
+        <div class="player-bar-wrap">
+          <div class="player-bar" onclick="seekSong(event)">
+            <div class="player-fill" id="playerFill"></div>
+          </div>
+          <div class="player-times"><span id="curTime">0:00</span><span id="totTime">3:19</span></div>
+        </div>
+        <div class="player-controls">
+          <button class="ctrl-btn" onclick="prevSong()"><svg viewBox="0 0 24 24"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5"/></svg></button>
+          <button class="play-btn" id="playBtn" onclick="togglePlay()">
+            <svg id="playIcon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <svg id="pauseIcon" style="display:none;fill:white;stroke:none" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <button class="ctrl-btn" onclick="nextSong()"><svg viewBox="0 0 24 24"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/></svg></button>
+        </div>
+      </div>
+      <div class="song-list">
+        <div class="song-item playing" onclick="selectSong(0)"><div class="song-num">♪</div><div class="song-info"><div class="song-name">Love Story</div><div class="song-art">Indila</div></div><div class="song-dur">3:19</div><div>❤️</div></div>
+        <div class="song-item" onclick="selectSong(1)"><div class="song-num">2</div><div class="song-info"><div class="song-name">505</div><div class="song-art">Arctic Monkeys</div></div><div class="song-dur">4:13</div><div>🤍</div></div>
+        <div class="song-item" onclick="selectSong(2)"><div class="song-num">3</div><div class="song-info"><div class="song-name">You're Beautiful Like This Song</div><div class="song-art">Jungkook</div></div><div class="song-dur">3:52</div><div>🤍</div></div>
+        <div class="song-item" onclick="selectSong(3)"><div class="song-num">4</div><div class="song-info"><div class="song-name">Do I Wanna Know?</div><div class="song-art">Arctic Monkeys</div></div><div class="song-dur">4:32</div><div>❤️</div></div>
+        <div class="song-item" onclick="selectSong(4)"><div class="song-num">5</div><div class="song-info"><div class="song-name">I Wanna Be Yours</div><div class="song-art">Arctic Monkeys</div></div><div class="song-dur">3:03</div><div>🤍</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<nav class="bnav" id="bnav" style="display:flex;">
+  <div class="btab active" onclick="switchPage('home')" id="tab-home"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span><div class="btab-dot"></div></div>
+  <div class="btab" onclick="switchPage('birthday')" id="tab-birthday"><svg viewBox="0 0 24 24"><path d="M12 2v4M9 5l1.5-2M15 5l-1.5-2"/><path d="M4 21h16v-8a4 4 0 00-4-4H8a4 4 0 00-4 4v8z"/><path d="M4 15h16"/></svg><span>Birthday</span><div class="btab-dot"></div></div>
+  <div class="btab" onclick="switchPage('memories')" id="tab-memories"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Memories</span><div class="btab-dot"></div></div>
+  <div class="btab" onclick="switchPage('letters')" id="tab-letters"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>Letters</span><div class="btab-dot"></div></div>
+  <div class="btab" onclick="switchPage('music')" id="tab-music"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Songs</span><div class="btab-dot"></div></div>
+  <div class="btab" onclick="switchPage('discover')" id="tab-discover"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><span>Discover</span><div class="btab-dot"></div></div>
+</nav>
+
+<div class="hb-overlay" id="hbOverlay">
+  <div class="hb-text">HAPPY<br>BIRTHDAY<br>BABY</div>
+</div>
+
+<script>
+function spawnHearts(){
+  const e=['💛','🌹','💕','✨','🌸','💖'];
+  for(let i=0;i<18;i++){
+    const el=document.createElement('div');
+    el.className='fheart';
+    el.textContent=e[Math.floor(Math.random()*e.length)];
+    el.style.left=Math.random()*100+'vw';
+    el.style.top=Math.random()*100+'vh';
+    el.style.animationDelay=(Math.random())+'s';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),3000);
+  }
+}
+/* Letter 1 - wax seal lock */
+const LETTER1_PASSCODE='1225';
+function openLetterLock(){
+  const modal=document.getElementById('letterLockModal');
+  const input=document.getElementById('letterLockInput');
+  modal.classList.add('show');
+  input.value='';
+  document.getElementById('letterLockError').classList.remove('show');
+  setTimeout(()=>input.focus(),300);
+}
+function closeLetterLock(){
+  document.getElementById('letterLockModal').classList.remove('show');
+}
+function checkLetterLock(){
+  const input=document.getElementById('letterLockInput');
+  const err=document.getElementById('letterLockError');
+  if(input.value.trim()===LETTER1_PASSCODE){
+    closeLetterLock();
+    const cover=document.getElementById('envLockCover');
+    const letter=document.getElementById('letterCard1');
+    cover.style.opacity='0';
+    cover.style.transform='scale(.95)';
+    setTimeout(()=>{
+      cover.style.display='none';
+      letter.style.display='block';
+      letter.style.animation='letterUnfold .8s ease forwards';
+    },450);
+  } else {
+    input.classList.add('shake');
+    err.classList.add('show');
+    setTimeout(()=>input.classList.remove('shake'),400);
+  }
+}
+const pages={home:'pageHome',birthday:'pageBirthday',memories:'pageMemories',letters:'pageLetters',music:'pageMusic',discover:'pageDiscover',almanac:'pageAlmanac',sky:'pageSky',solar:'pageSolar',shows:'pageShows',tarot:'pageTarot',tide:'pageTide',aurora:'pageAurora',bougain:'pageBougain',sealed:'pageSealed',quietmagic:'pageQuietMagic',dreamcity:'pageDreamCity',sweetthings:'pageSweetThings'};
+function switchPage(key){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.btab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(pages[key]).classList.add('active');
+  const tabEl=document.getElementById('tab-'+key);
+  if(tabEl) tabEl.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(triggerReveal,120);
+  const rainAudio=document.getElementById('rainAudio');
+  if(rainAudio){
+    if(key==='quietmagic' && rainAudio.getAttribute('src')){
+      rainAudio.volume=0.45;
+      rainAudio.play().catch(()=>{});
+    } else {
+      rainAudio.pause();
+    }
+  }
+  if(key!=='birthday' && typeof stopMicListening==='function'){
+    stopMicListening();
+  }
+}
+function goToDiscover(){
+  switchPage('discover');
+}
+function triggerReveal(){
+  document.querySelectorAll('.reveal').forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight*.95) el.classList.add('visible');
+  });
+}
+window.addEventListener('scroll',triggerReveal);
+triggerReveal();
+const songs=[
+  {name:'Love Story',artist:'Indila',emoji:'🌹',dur:'3:19',sec:199,src:''},
+  {name:'505',artist:'Arctic Monkeys',emoji:'🌙',dur:'4:13',sec:253,src:''},
+  {name:'You\'re Beautiful Like This Song',artist:'Jungkook',emoji:'💜',dur:'3:52',sec:232,src:''},
+  {name:'Do I Wanna Know?',artist:'Arctic Monkeys',emoji:'🖤',dur:'4:32',sec:272,src:''},
+  {name:'I Wanna Be Yours',artist:'Arctic Monkeys',emoji:'💛',dur:'3:03',sec:183,src:''}
+];
+let curIdx=0,playing=false;
+const audioEl=document.getElementById('audioPlayer');
+function fmtTime(s){
+  if(!isFinite(s)||s<0) s=0;
+  const m=Math.floor(s/60), sec=Math.floor(s%60);
+  return m+':'+(sec<10?'0':'')+sec;
+}
+function selectSong(i){
+  curIdx=i;
+  const song=songs[i];
+  document.getElementById('songName').textContent=song.name;
+  document.getElementById('songArtist').textContent=song.artist;
+  document.getElementById('discEmoji').textContent=song.emoji;
+  document.getElementById('totTime').textContent=song.dur;
+  document.getElementById('curTime').textContent='0:00';
+  document.getElementById('playerFill').style.width='0%';
+  document.querySelectorAll('.song-item').forEach((s,j)=>{
+    s.classList.toggle('playing',j===i);
+    s.querySelector('.song-num').textContent=j===i?'♪':(j+1);
+  });
+  if(song.src){
+    audioEl.src=song.src;
+    if(playing){ audioEl.play().catch(()=>{}); }
+  } else {
+    audioEl.removeAttribute('src');
+    audioEl.load();
+    playing=false;
+    updatePlayIcons();
+  }
+}
+function updatePlayIcons(){
+  document.getElementById('playIcon').style.display=playing?'none':'block';
+  document.getElementById('pauseIcon').style.display=playing?'block':'none';
+  document.getElementById('disc').className='player-disc'+(playing?' spinning':'');
+  document.getElementById('playerEq').className='player-eq'+(playing?' playing':'');
+}
+function togglePlay(){
+  const song=songs[curIdx];
+  if(!song.src){
+    // No song file added yet for this track
+    return;
+  }
+  if(audioEl.paused){
+    audioEl.play().catch(()=>{});
+  } else {
+    audioEl.pause();
+  }
+}
+audioEl.addEventListener('play',()=>{ playing=true; updatePlayIcons(); });
+audioEl.addEventListener('pause',()=>{ playing=false; updatePlayIcons(); });
+audioEl.addEventListener('timeupdate',()=>{
+  if(!audioEl.duration) return;
+  const pct=(audioEl.currentTime/audioEl.duration)*100;
+  document.getElementById('playerFill').style.width=pct+'%';
+  document.getElementById('curTime').textContent=fmtTime(audioEl.currentTime);
+});
+audioEl.addEventListener('loadedmetadata',()=>{
+  document.getElementById('totTime').textContent=fmtTime(audioEl.duration);
+});
+audioEl.addEventListener('ended',()=>{ nextSong(); });
+function nextSong(){selectSong((curIdx+1)%songs.length);}
+function prevSong(){selectSong((curIdx-1+songs.length)%songs.length);}
+function seekSong(e){
+  if(!audioEl.duration) return;
+  const pct=e.offsetX/e.currentTarget.offsetWidth;
+  audioEl.currentTime=pct*audioEl.duration;
+  document.getElementById('playerFill').style.width=(pct*100)+'%';
+}
+
+/* Birthday: countdown + age */
+function spawnBdayStars(){
+  const wrap=document.getElementById('bdayStars');
+  if(!wrap) return;
+  const count=13;
+  for(let i=0;i<count;i++){
+    const star=document.createElement('div');
+    star.className='bday-star';
+    star.style.top=(Math.random()*100)+'%';
+    star.style.left=(Math.random()*100)+'%';
+    const size=(Math.random()*1+1).toFixed(1);
+    star.style.width=size+'px';
+    star.style.height=size+'px';
+    star.style.animationDuration=(1.8+Math.random()*2.4).toFixed(2)+'s';
+    star.style.animationDelay=(Math.random()*3).toFixed(2)+'s';
+    wrap.appendChild(star);
+  }
+}
+spawnBdayStars();
+const BIRTH_MONTH=9, BIRTH_DAY=12, BIRTH_YEAR=2006;
+function updateBirthdayInfo(){
+  const now=new Date();
+  let nextBday=new Date(now.getFullYear(),BIRTH_MONTH-1,BIRTH_DAY-1,23,59,59);
+  if(nextBday<now){ nextBday=new Date(now.getFullYear()+1,BIRTH_MONTH-1,BIRTH_DAY-1,23,59,59); }
+  const diff=nextBday-now;
+  const isToday = now.getDate()===BIRTH_DAY && (now.getMonth()+1)===BIRTH_MONTH;
+  if(isToday){
+    document.getElementById('countdownRow').style.display='none';
+    document.getElementById('cdDone').style.display='block';
+  } else {
+    document.getElementById('countdownRow').style.display='flex';
+    document.getElementById('cdDone').style.display='none';
+    const d=Math.floor(diff/86400000);
+    const h=Math.floor((diff%86400000)/3600000);
+    const m=Math.floor((diff%3600000)/60000);
+    const s=Math.floor((diff%60000)/1000);
+    document.getElementById('cdDays').textContent=String(d).padStart(2,'0');
+    document.getElementById('cdHours').textContent=String(h).padStart(2,'0');
+    document.getElementById('cdMins').textContent=String(m).padStart(2,'0');
+    document.getElementById('cdSecs').textContent=String(s).padStart(2,'0');
+  }
+}
+updateBirthdayInfo();
+setInterval(updateBirthdayInfo,1000);
+
+function blowCandle(el){
+  if(el.classList.contains('blown')) return;
+  el.classList.add('blown');
+  spawnConfettiBurst(el);
+  const all=document.querySelectorAll('#cakeCandles .candle');
+  const allBlown=[...all].every(c=>c.classList.contains('blown'));
+  if(allBlown){
+    document.getElementById('cakeMsg').classList.add('show');
+    spawnHearts();
+    spawnBalloons();
+    spawnBigConfetti();
+    const hb=document.getElementById('hbOverlay');
+    hb.classList.add('show');
+    setTimeout(()=>hb.classList.remove('show'),7000);
+    stopMicListening();
+  }
+}
+
+/* Blow-into-mic candle detection */
+let micStream=null, micCtx=null, micAnalyser=null, micData=null, micRAF=null;
+let micArmed=false, micCooldown=false, micBaseline=0.02;
+async function enableMicBlow(){
+  if(micArmed) return;
+  const btn=document.getElementById('micBtn');
+  try{
+    micStream=await navigator.mediaDevices.getUserMedia({audio:true});
+  }catch(err){
+    btn.textContent='🎤 mic unavailable — tap the candles instead';
+    btn.disabled=true;
+    return;
+  }
+  micArmed=true;
+  btn.classList.add('listening');
+  btn.textContent='🎤 listening... blow now';
+  micCtx=new (window.AudioContext||window.webkitAudioContext)();
+  const source=micCtx.createMediaStreamSource(micStream);
+  micAnalyser=micCtx.createAnalyser();
+  micAnalyser.fftSize=1024;
+  source.connect(micAnalyser);
+  micData=new Uint8Array(micAnalyser.fftSize);
+  const baselineSamples=[];
+  function loop(){
+    if(!micArmed) return;
+    micAnalyser.getByteTimeDomainData(micData);
+    let sum=0;
+    for(let i=0;i<micData.length;i++){
+      const v=(micData[i]-128)/128;
+      sum+=v*v;
+    }
+    const rms=Math.sqrt(sum/micData.length);
+    if(baselineSamples.length<40){
+      baselineSamples.push(rms);
+      micBaseline=baselineSamples.reduce((a,b)=>a+b,0)/baselineSamples.length;
+    } else if(!micCooldown && rms>Math.max(0.13,micBaseline*3.2)){
+      triggerMicBlow();
+    } else if(!micCooldown){
+      micBaseline=micBaseline*0.98+rms*0.02;
+    }
+    micRAF=requestAnimationFrame(loop);
+  }
+  loop();
+}
+function triggerMicBlow(){
+  if(micCooldown) return;
+  micCooldown=true;
+  const remaining=document.querySelectorAll('#cakeCandles .candle:not(.blown)');
+  remaining.forEach((c,i)=>{ setTimeout(()=>blowCandle(c), i*150); });
+  setTimeout(()=>{ micCooldown=false; },3000);
+}
+function stopMicListening(){
+  if(!micArmed) return;
+  micArmed=false;
+  if(micRAF) cancelAnimationFrame(micRAF);
+  if(micStream) micStream.getTracks().forEach(t=>t.stop());
+  if(micCtx) micCtx.close().catch(()=>{});
+  const btn=document.getElementById('micBtn');
+  if(btn) btn.style.display='none';
+}
+
+function spawnBalloons(){
+  const colors=['#FF6B6B','#FFD93D','#6BCB77','#4D96FF','#FF6BCB','#FFA94D','#845EC2','#4ECDC4'];
+  for(let i=0;i<14;i++){
+    const b=document.createElement('div');
+    b.className='balloon';
+    b.style.left=(4+Math.random()*88)+'vw';
+    b.style.background=colors[Math.floor(Math.random()*colors.length)];
+    b.style.setProperty('--sway',(Math.random()*100-50)+'px');
+    b.style.animationDuration=(4+Math.random()*3)+'s';
+    b.style.animationDelay=(Math.random()*1)+'s';
+    document.body.appendChild(b);
+    setTimeout(()=>b.remove(),9000);
+  }
+}
+function spawnBigConfetti(){
+  const colors=['#FF6B6B','#FFD93D','#6BCB77','#4D96FF','#FF6BCB','#FFA94D','#845EC2','#4ECDC4'];
+  for(let i=0;i<55;i++){
+    const c=document.createElement('div');
+    c.className='confetti-piece';
+    c.style.left=Math.random()*100+'vw';
+    c.style.background=colors[Math.floor(Math.random()*colors.length)];
+    c.style.width=(6+Math.random()*6)+'px';
+    c.style.height=(10+Math.random()*10)+'px';
+    if(Math.random()>0.5) c.style.borderRadius='50%';
+    c.style.animationDuration=(2.2+Math.random()*1.6)+'s';
+    c.style.animationDelay=(Math.random()*0.7)+'s';
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),4500);
+  }
+}
+
+/* Growth Rings */
+const yearWords=[
+  {y:1,w:'Wonder'},{y:2,w:'Giggles'},{y:3,w:'Curiosity'},{y:4,w:'Imagination'},
+  {y:5,w:'Sparkle'},{y:6,w:'Kindness'},{y:7,w:'Courage'},{y:8,w:'Dreamer'},
+  {y:9,w:'Warmth'},{y:10,w:'Spirit'},{y:11,w:'Grace'},{y:12,w:'Passion'},
+  {y:13,w:'Growth'},{y:14,w:'Strength'},{y:15,w:'Radiance'},{y:16,w:'Wisdom'},
+  {y:17,w:'Confidence'},{y:18,w:'Brilliance'},{y:19,w:'Rose'}
+];
+function buildRings(){
+  const wrap=document.getElementById('ringsScroll');
+  if(!wrap||wrap.childElementCount) return;
+  yearWords.forEach(item=>{
+    const chip=document.createElement('div');
+    chip.className='ring-chip';
+    chip.textContent=item.y;
+    chip.onclick=()=>{
+      document.querySelectorAll('.ring-chip').forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+      document.getElementById('ringReveal').innerHTML=
+        '<div class="ring-reveal-year">Year '+item.y+'</div><div class="ring-reveal-word">'+item.w+'</div>';
+    };
+    wrap.appendChild(chip);
+  });
+}
+buildRings();
+
+/* Her Sky, That Night */
+const skyStars=[
+  {top:'12%',left:'14%',t:'The night she was born, the sky wore a waning gibbous moon — still bright, still glowing.'},
+  {top:'30%',left:'70%',t:'Every star that night had already seen every star that would ever matter to her.'},
+  {top:'55%',left:'20%',t:'Somewhere above, the sky quietly agreed: this one would be different.'},
+  {top:'68%',left:'62%',t:'The same sky still watches over her tonight, wherever she is.'},
+  {top:'20%',left:'45%',t:'A Taurus was born under an earth sign, but the sky claimed her first.'},
+  {top:'80%',left:'35%',t:'One star that night burned a little brighter, though it did not know why yet.'}
+];
+function buildSky(){
+  const field=document.getElementById('skyField');
+  if(!field||field.querySelector('.star-el')) return;
+  for(let i=0;i<24;i++){
+    const bg=document.createElement('div');
+    bg.className='bg-star';
+    bg.style.top=Math.random()*100+'%';
+    bg.style.left=Math.random()*100+'%';
+    const s=1+Math.random()*2;
+    bg.style.width=s+'px';
+    bg.style.height=s+'px';
+    bg.style.animationDelay=(Math.random()*3)+'s';
+    field.appendChild(bg);
+  }
+  skyStars.forEach((s,idx)=>{
+    const el=document.createElement('div');
+    el.className='star-el';
+    el.textContent='✦';
+    el.style.top=s.top;
+    el.style.left=s.left;
+    el.style.animationDelay=(idx*0.3)+'s';
+    el.onclick=()=>{
+      document.getElementById('skyReveal').innerHTML='<div class="sky-reveal-text">'+s.t+'</div>';
+    };
+    field.appendChild(el);
+  });
+}
+buildSky();
+
+/* Her Solar System */
+const solarData=[
+  {key:'mercury',radius:34,size:11,duration:6, color:'radial-gradient(circle at 35% 30%,#F2EFE6,#A9A49A)',trait:'Clever as Mercury.'},
+  {key:'venus',radius:50,size:16,duration:9,  color:'radial-gradient(circle at 35% 30%,#FBE3C2,#D99A5B)',trait:'Beautiful as Venus.'},
+  {key:'earth',radius:66,size:17,duration:12, color:'radial-gradient(circle at 35% 30%,#8FD9E8,#2E7D5B)',trait:'Full of life as Earth.'},
+  {key:'mars',radius:82,size:14,duration:16,  color:'radial-gradient(circle at 35% 30%,#EDA07E,#9C3B1E)',trait:'Aggressive as Mars.'},
+  {key:'jupiter',radius:100,size:24,duration:20,color:'radial-gradient(circle at 35% 30%,#F0D2A0,#B9793C)',trait:'Massive heart, like Jupiter.'},
+  {key:'saturn',radius:118,size:21,duration:26,color:'radial-gradient(circle at 35% 30%,#F5E6BE,#C7A45C)',trait:'Cold as Saturn.',ring:true},
+  {key:'uranus',radius:134,size:17,duration:32,color:'radial-gradient(circle at 35% 30%,#D6F5F0,#6FBFB4)',trait:'Unpredictable as Uranus.'},
+  {key:'neptune',radius:148,size:17,duration:38,color:'radial-gradient(circle at 35% 30%,#A6B4EE,#33408F)',trait:'Mysterious as Neptune.'}
+];
+const solarTraits={sun:'Hot as the sun.'};
+solarData.forEach(p=>solarTraits[p.key]=p.trait);
+let solarDone=new Set();
+function buildSolar(){
+  const field=document.getElementById('solarField');
+  if(!field||field.querySelector('.orbit-ring')) return;
+  solarData.forEach(p=>{
+    const ring=document.createElement('div');
+    ring.className='orbit-ring';
+    ring.style.width=(p.radius*2)+'px';
+    ring.style.height=(p.radius*2)+'px';
+    ring.style.animationDuration=p.duration+'s';
+    const planet=document.createElement('div');
+    planet.className='planet';
+    planet.id='planet-'+p.key;
+    planet.style.width=p.size+'px';
+    planet.style.height=p.size+'px';
+    planet.style.background=p.color;
+    planet.style.animationDuration=p.duration+'s';
+    planet.onclick=(e)=>{e.stopPropagation();tapSolar(p.key);};
+    if(p.ring){
+      const sr=document.createElement('div');
+      sr.className='saturn-ring';
+      planet.appendChild(sr);
+    }
+    ring.appendChild(planet);
+    field.appendChild(ring);
+  });
+}
+function tapSolar(key){
+  if(!solarDone.has(key)){
+    solarDone.add(key);
+    const el=key==='sun'?document.getElementById('sunEl'):document.getElementById('planet-'+key);
+    if(el) el.classList.add('found');
+    document.getElementById('solarProgress').textContent=solarDone.size+' / 9 discovered';
+  }
+  document.getElementById('solarReveal').innerHTML='<div class="sky-reveal-text">'+solarTraits[key]+'</div>';
+  if(solarDone.size===9){
+    setTimeout(()=>{
+      document.getElementById('solarComplete').classList.add('show');
+      spawnHearts();
+    },400);
+  }
+}
+function resetSolar(){
+  solarDone.clear();
+  document.querySelectorAll('#solarField .found').forEach(e=>e.classList.remove('found'));
+  document.getElementById('sunEl').classList.remove('found');
+  document.getElementById('solarProgress').textContent='0 / 9 discovered';
+  document.getElementById('solarComplete').classList.remove('show');
+  document.getElementById('solarReveal').innerHTML='<div class="sky-reveal-hint">tap the sun or a planet ✦</div>';
+}
+buildSolar();
+
+/* A Letter, Locked - unlocks 31 December 2026, 11:59 PM */
+const SEALED_UNLOCK=new Date(2026,11,31,23,59,0).getTime();
+const SEALED_PREVIEW_UNLOCK=false; // TEMP: set to false to re-lock the letter until 31 Dec 2026
+function checkSealedLetter(){
+  const now=Date.now();
+  const diff=SEALED_UNLOCK-now;
+  if(diff<=0 || SEALED_PREVIEW_UNLOCK){
+    document.getElementById('sealedLockedView').style.display='none';
+    document.getElementById('sealedLetterBody').classList.add('show');
+    document.getElementById('sealedSub').textContent='opened, at last';
+    return;
+  }
+  const d=Math.floor(diff/86400000);
+  const h=Math.floor((diff%86400000)/3600000);
+  const m=Math.floor((diff%3600000)/60000);
+  const s=Math.floor((diff%60000)/1000);
+  document.getElementById('sldDays').textContent=String(d).padStart(2,'0');
+  document.getElementById('sldHours').textContent=String(h).padStart(2,'0');
+  document.getElementById('sldMins').textContent=String(m).padStart(2,'0');
+  document.getElementById('sldSecs').textContent=String(s).padStart(2,'0');
+}
+checkSealedLetter();
+setInterval(checkSealedLetter,1000);
+
+/* Her Quiet Magic - rain + butterfly (enhanced) */
+function buildRain(){
+  const rainEl=document.getElementById('qmRain');
+  if(!rainEl||rainEl.querySelector('.qm-drop')) return;
+  for(let i=0;i<46;i++){
+    const d=document.createElement('div');
+    d.className='qm-drop';
+    d.style.setProperty('--x',(Math.random()*100).toFixed(1)+'%');
+    d.style.setProperty('--w',(1+Math.random()*1.3).toFixed(2)+'px');
+    d.style.setProperty('--dur',(0.9+Math.random()*0.9).toFixed(2)+'s');
+    d.style.setProperty('--delay',(-Math.random()*2).toFixed(2)+'s');
+    d.style.setProperty('--op',(0.35+Math.random()*0.45).toFixed(2));
+    d.style.setProperty('--drift',(10+Math.random()*10).toFixed(0)+'px');
+    d.style.setProperty('--tilt',(6+Math.random()*4).toFixed(0)+'deg');
+    d.style.height=(40+Math.random()*50)+'px';
+    rainEl.appendChild(d);
+  }
+  const dripEl=document.getElementById('qmDrips');
+  if(dripEl && !dripEl.querySelector('.qm-drip')){
+    for(let i=0;i<10;i++){
+      const dr=document.createElement('div');
+      dr.className='qm-drip';
+      dr.style.setProperty('--dx',(Math.random()*94+3).toFixed(0)+'%');
+      dr.style.setProperty('--dy',(Math.random()*50).toFixed(0)+'%');
+      dr.style.setProperty('--dh',(30+Math.random()*70).toFixed(0)+'px');
+      dripEl.appendChild(dr);
+    }
+  }
+  const puddleEl=document.getElementById('qmPuddles');
+  if(puddleEl && !puddleEl.querySelector('.qm-puddle-ring')){
+    for(let i=0;i<6;i++){
+      const r=document.createElement('div');
+      r.className='qm-puddle-ring';
+      r.style.setProperty('--rx',(Math.random()*90+5).toFixed(0)+'%');
+      r.style.setProperty('--rdelay',(Math.random()*1.8).toFixed(2)+'s');
+      r.style.setProperty('--rdur',(1.5+Math.random()*0.8).toFixed(2)+'s');
+      puddleEl.appendChild(r);
+    }
+  }
+}
+buildRain();
+function strikeLightning(){
+  const flash=document.getElementById('qmFlash');
+  const bolt=document.getElementById('qmBolt');
+  if(!flash||!bolt) return;
+  bolt.style.left=(10+Math.random()*60)+'%';
+  flash.classList.remove('strike'); void flash.offsetWidth; flash.classList.add('strike');
+  bolt.classList.remove('strike'); void bolt.offsetWidth; bolt.classList.add('strike');
+  setTimeout(strikeLightning,6000+Math.random()*9000);
+}
+setTimeout(strikeLightning,3000+Math.random()*4000);
+let butterflyLanded=false;
+function landButterfly(){
+  if(butterflyLanded) return;
+  butterflyLanded=true;
+  const b=document.getElementById('qmButterfly');
+  b.style.opacity='1';
+  b.classList.add('flying');
+  document.getElementById('qmHint').textContent='';
+  setTimeout(()=>{
+    b.classList.remove('flying');
+    b.classList.add('landed');
+    document.getElementById('qmReveal').classList.add('show');
+  },2600);
+}
+
+/* Her Dream City - day to vampire night */
+function riseMoon(){
+  var page = document.querySelector('.dc-page');
+  if (page.classList.contains('night')) return;
+  page.classList.add('night');
+  setTimeout(function(){
+    document.getElementById('dcMoonLine').classList.add('show');
+  }, 2000);
+}
+function showVampireLine(){
+  document.getElementById('dcVampireLine').classList.add('show');
+}
+
+/* Her Sweetest Things - untie the bow, then cut the cake with a draggable knife */
+let bowUntied=false;
+function untieBow(){
+  if(bowUntied) return;
+  bowUntied=true;
+  document.getElementById('stBow').classList.add('untied');
+  document.getElementById('stHint').textContent='drag the knife down through the cake';
+  document.getElementById('stSub').textContent='untie the bow, then cut the cake';
+  setTimeout(()=>{
+    document.getElementById('stKnife').classList.add('show');
+    document.getElementById('stCutHint').classList.add('show');
+  },500);
+}
+
+let cakeCut=false;
+let knifeDragging=false;
+let knifeStartClientY=0, knifeStartTop=0;
+function initKnifeDrag(){
+  const knife=document.getElementById('stKnife');
+  const scene=document.getElementById('stScene');
+  if(!knife||!scene) return;
+
+  function getTopPx(){
+    const cs=window.getComputedStyle(knife);
+    const t=cs.top;
+    if(t.endsWith('%')) return (parseFloat(t)/100)*scene.offsetHeight;
+    return parseFloat(t)||0;
+  }
+
+  function onDown(e){
+    if(cakeCut||!knife.classList.contains('show')) return;
+    knifeDragging=true;
+    knife.classList.add('dragging');
+    knifeStartClientY=(e.touches?e.touches[0].clientY:e.clientY);
+    knifeStartTop=getTopPx();
+    if(knife.setPointerCapture && e.pointerId!==undefined){
+      try{ knife.setPointerCapture(e.pointerId); }catch(err){}
+    }
+    e.preventDefault();
+  }
+  function onMove(e){
+    if(!knifeDragging||cakeCut) return;
+    const clientY=(e.touches?e.touches[0].clientY:e.clientY);
+    const delta=clientY-knifeStartClientY;
+    let newTop=knifeStartTop+delta;
+    const maxTop=scene.offsetHeight-142;
+    newTop=Math.max(0,Math.min(maxTop,newTop));
+    knife.style.top=newTop+'px';
+
+    const knifeRect=knife.getBoundingClientRect();
+    const cakeRect=document.getElementById('stCake').getBoundingClientRect();
+    if(knifeRect.bottom >= cakeRect.top+18){
+      cutCake();
+    }
+    e.preventDefault();
+  }
+  function onUp(){
+    if(!knifeDragging) return;
+    knifeDragging=false;
+    knife.classList.remove('dragging');
+    if(!cakeCut){
+      knife.style.top='2%';
+    }
+  }
+
+  knife.addEventListener('pointerdown',onDown);
+  window.addEventListener('pointermove',onMove);
+  window.addEventListener('pointerup',onUp);
+  knife.addEventListener('touchstart',onDown,{passive:false});
+  window.addEventListener('touchmove',onMove,{passive:false});
+  window.addEventListener('touchend',onUp);
+}
+initKnifeDrag();
+function cutCake(){
+  if(cakeCut) return;
+  cakeCut=true;
+  knifeDragging=false;
+  document.getElementById('stCake').classList.add('cut');
+  const knife=document.getElementById('stKnife');
+  knife.classList.remove('dragging');
+  knife.style.transition='opacity .5s ease, transform .5s ease';
+  knife.style.opacity='0';
+  knife.style.transform='translate(-50%,10px)';
+  document.getElementById('stCutHint').classList.remove('show');
+  document.getElementById('stHint').textContent='';
+  document.getElementById('stSub').textContent='happy birthday, my baby';
+  document.getElementById('stRevealText').textContent='Happy birthday again, my baby 🎂 — here\'s to more cake, more bows, and more sweet little moments, always.';
+  setTimeout(()=>{
+    document.getElementById('stReveal').classList.add('show');
+  },700);
+}
+
+/* Her Comfort Universe */
+const showsData=[
+  {title:'The Vampire Diaries',sub:'gothic romance',accent:'🩸',bg:'linear-gradient(160deg,#3B0A0A,#180404)',color:'#F5E6A3',back:'The one she reaches for on a slow, moody night.',photo:''},
+  {title:'The Originals',sub:'tvd universe',accent:'🐺',bg:'linear-gradient(160deg,#2A1035,#120717)',color:'#D9BB74',back:'New Orleans, old blood, same obsession.',photo:''},
+  {title:'Gossip Girl',sub:'manhattan elite',accent:'XOXO',bg:'linear-gradient(160deg,#D9BB74,#8B6B2E)',color:'#2C1810',back:'Her scheming, elegant, unbothered comfort watch.',photo:''},
+  {title:'My Royal Nemesis',sub:'k-drama · #1',accent:'👑',bg:'linear-gradient(160deg,#F5E6A3,#C9A55A)',color:'#5C1A1A',back:'Enemies-to-something-more — she never gets tired of this one.',photo:''},
+  {title:'When The Phone Rings',sub:'k-drama',accent:'☎️',bg:'linear-gradient(160deg,#C9D6E8,#5C7A9C)',color:'#1A2A3A',back:'Tense, quiet, and impossible to look away from.',photo:''},
+  {title:'Head Over Heels',sub:'k-drama',accent:'💗',bg:'linear-gradient(160deg,#F6C9D6,#E88FA6)',color:'#5C1A1A',back:'Soft, sweet, and easy to fall into.',photo:''},
+  {title:'Genie, Make a Wish',sub:'k-drama',accent:'🧞',bg:'linear-gradient(160deg,#DCCCF2,#A98FD1)',color:'#3A2A5C',back:'A little magic, a little mischief — just her speed.',photo:''},
+  {title:'My Demon',sub:'k-drama',accent:'🔥',bg:'linear-gradient(160deg,#4A1D5C,#1B0A26)',color:'#F5E6A3',back:'Her current obsession — this is her era right now.',photo:''},
+  {title:'Business Proposal',sub:'k-drama',accent:'💼',bg:'linear-gradient(160deg,#FBE0C8,#E8A87C)',color:'#5C1A1A',back:'Fake dating, real feelings — her favorite kind of chaos.',photo:''},
+  {title:'Queen of Tears',sub:'k-drama',accent:'💧',bg:'linear-gradient(160deg,#F6C9D6,#D98CA0)',color:'#5C1A1A',back:'The kind of love story that wrecks her a little, every time.',photo:''},
+  {title:"It's Okay to Not Be Okay",sub:'k-drama',accent:'🦋',bg:'linear-gradient(160deg,#BFE8DC,#5FA893)',color:'#1A3A2E',back:'Soft, healing, and quietly her favorite kind of story.',photo:''},
+  {title:'Mercy for None',sub:'k-drama',accent:'🗡️',bg:'linear-gradient(160deg,#1C1C1C,#3B0A0A)',color:'#E8C39E',back:'The dark, sharp one she watches with the lights off.',photo:''},
+  {title:'Never Have I Ever',sub:'teen comfort watch',accent:'🧡',bg:'linear-gradient(160deg,#F5A25D,#D9642E)',color:'#2C1810',back:'Messy, funny, and a little bit her at that age.',photo:''},
+  {title:'Alice in Borderland',sub:'survival thriller',accent:'🃏',bg:'linear-gradient(160deg,#1A2E2E,#0A1414)',color:'#7FE8D8',back:'High stakes, sharp edges — the kind of tense she can\'t look away from.',photo:''}
+];
+const moviesData=[
+  {title:'The Princess Diaries',sub:'movie',accent:'👑',bg:'linear-gradient(160deg,#DCCCF2,#8FA6D9)',color:'#1A2A5C',back:'Genovia, tiaras, and the ultimate glow-up story.',photo:''},
+  {title:'Disney Classics',sub:'all the old ones',accent:'✨',bg:'linear-gradient(160deg,#8FA6D9,#2C3E7A)',color:'#F5E6A3',back:'The old-school Disney movies she never grows out of.',photo:''},
+  {title:'The Devil Wears Prada',sub:'movie',accent:'👠',bg:'linear-gradient(160deg,#2C2C2C,#0F0F0F)',color:'#E8C39E',back:'Iconic, chic, and endlessly quotable.',photo:''},
+  {title:'Mean Girls',sub:'movie',accent:'💗',bg:'linear-gradient(160deg,#F5A9C9,#D95C94)',color:'#3A0A1A',back:'On Wednesdays, she wears pink — every time this is on.',photo:''},
+  {title:'Legally Blonde',sub:'movie',accent:'💖',bg:'linear-gradient(160deg,#F7C9E0,#E85CA6)',color:'#5C1A3A',back:"What, like it's hard? Her ultimate confidence-boost watch.",photo:''},
+  {title:'Clueless',sub:'movie',accent:'🌼',bg:'linear-gradient(160deg,#F5E6A3,#D9C25C)',color:'#5C4A1A',back:"As if — a 90s comfort classic she's always down for.",photo:''}
+];
+function renderShowGrid(gridId,data){
+  const grid=document.getElementById(gridId);
+  if(!grid||grid.childElementCount) return;
+  data.forEach((s)=>{
+    const card=document.createElement('div');
+    card.className='show-card';
+    card.innerHTML=
+      '<div class="show-card-inner">'+
+        '<div class="show-face show-front" style="'+(s.photo?('background-image:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.55)),url(\''+s.photo+'\');background-size:cover;background-position:center;color:#F5E6A3;'):('background:'+s.bg+';color:'+s.color+';'))+'">'+
+          '<div class="show-title">'+s.title+'</div>'+
+          '<div class="show-sub">'+s.sub+'</div>'+
+        '</div>'+
+        '<div class="show-face show-back" style="background:'+s.bg+';">'+
+          '<div class="show-back-text" style="color:'+s.color+';">'+s.back+'</div>'+
+        '</div>'+
+      '</div>';
+    card.onclick=()=>card.classList.toggle('flipped');
+    grid.appendChild(card);
+  });
+}
+function buildShows(){
+  renderShowGrid('showGrid',showsData);
+  renderShowGrid('movieGrid',moviesData);
+}
+buildShows();
+
+/* Her Tarot Draw */
+const tarotDeck=[
+  {name:'The Star',icon:'⭐',meaning:'The hope she carries without even knowing it.'},
+  {name:'The Sun',icon:'☀️',meaning:'The warmth she gives without ever expecting it back.'},
+  {name:'The Moon',icon:'🌙',meaning:'The quiet, mysterious side she rarely shows anyone.'},
+  {name:'The Empress',icon:'🌷',meaning:'Nurturing, magnetic — people feel safe around her.'},
+  {name:'The Lovers',icon:'💞',meaning:'A heart that loves fully, deeply, and without half-measures.'},
+  {name:'Strength',icon:'🦁',meaning:'A quiet, steady power hiding beneath all that softness.'},
+  {name:'The World',icon:'🌍',meaning:'She completes whatever room she walks into.'}
+];
+let tarotRemaining=[...tarotDeck];
+let tarotDrawn=0;
+let tarotAnimating=false;
+function drawTarot(){
+  if(tarotAnimating) return;
+  const card=document.getElementById('tarotCard');
+  if(card.classList.contains('flipped')){
+    tarotAnimating=true;
+    card.classList.remove('flipped');
+    setTimeout(()=>{ pickTarotCard(); tarotAnimating=false; },350);
+    return;
+  }
+  pickTarotCard();
+}
+function pickTarotCard(){
+  if(tarotRemaining.length===0) tarotRemaining=[...tarotDeck];
+  const idx=Math.floor(Math.random()*tarotRemaining.length);
+  const card=tarotRemaining.splice(idx,1)[0];
+  document.getElementById('tarotFront').innerHTML=
+    '<div class="tarot-front-icon">'+card.icon+'</div>'+
+    '<div class="tarot-front-name">'+card.name+'</div>'+
+    '<div class="tarot-front-meaning">'+card.meaning+'</div>';
+  document.getElementById('tarotCard').classList.add('flipped');
+  tarotDrawn=Math.min(tarotDrawn+1,tarotDeck.length);
+  document.getElementById('tarotHint').textContent='tap the card to draw again';
+  document.getElementById('tarotProgress').textContent=tarotDrawn+' / '+tarotDeck.length+' cards drawn';
+  if(tarotRemaining.length===0){
+    document.getElementById('tarotReset').style.display='block';
+  }
+}
+function resetTarot(){
+  tarotRemaining=[...tarotDeck];
+  tarotDrawn=0;
+  document.getElementById('tarotCard').classList.remove('flipped');
+  document.getElementById('tarotHint').textContent='tap the card to draw';
+  document.getElementById('tarotProgress').textContent='0 / '+tarotDeck.length+' cards drawn';
+  document.getElementById('tarotReset').style.display='none';
+}
+
+/* The Tide of Her */
+const tideItems=[
+  {icon:'🐚',name:'A Shell',text:'Beautiful even when she isn\'t trying to be.'},
+  {icon:'🦪',name:'A Pearl',text:'Something rare, formed quietly under pressure.'},
+  {icon:'⭐',name:'A Starfish',text:'She finds her own shape, her own way, always.'},
+  {icon:'⚓',name:'An Anchor',text:'Steadies everything and everyone around her.'},
+  {icon:'🫧',name:'Sea Foam',text:'Light, playful, impossible not to smile at.'},
+  {icon:'📜',name:'A Message in a Bottle',text:'Carries feelings she doesn\'t always say out loud.'},
+  {icon:'🌊',name:'The Wave Itself',text:'Comes back to you, every single time.'}
+];
+let tideRemaining=[...tideItems];
+let tideFound=0;
+let tideAnimating=false;
+function drawTide(){
+  if(tideAnimating) return;
+  tideAnimating=true;
+  const treasure=document.getElementById('tideTreasure');
+  treasure.classList.remove('show');
+  setTimeout(()=>{
+    if(tideRemaining.length===0) tideRemaining=[...tideItems];
+    const idx=Math.floor(Math.random()*tideRemaining.length);
+    const item=tideRemaining.splice(idx,1)[0];
+    treasure.textContent=item.icon;
+    treasure.classList.add('show');
+    document.getElementById('tideReveal').style.display='block';
+    document.getElementById('tideRevealName').textContent=item.name;
+    document.getElementById('tideRevealText').textContent=item.text;
+    document.getElementById('tideHint').textContent='tap the water again ✦';
+    tideFound=Math.min(tideFound+1,tideItems.length);
+    document.getElementById('tideProgress').textContent=tideFound+' / '+tideItems.length+' found';
+    if(tideRemaining.length===0){
+      document.getElementById('tideReset').style.display='block';
+    }
+    tideAnimating=false;
+  },350);
+}
+function resetTide(){
+  tideRemaining=[...tideItems];
+  tideFound=0;
+  document.getElementById('tideTreasure').classList.remove('show');
+  document.getElementById('tideReveal').style.display='none';
+  document.getElementById('tideHint').textContent='tap the water ✦';
+  document.getElementById('tideProgress').textContent='0 / '+tideItems.length+' found';
+  document.getElementById('tideReset').style.display='none';
+}
+
+/* The Northern Lights */
+function buildAuroraStars(){
+  const field=document.getElementById('auroraField');
+  if(!field||field.querySelector('.aurora-star')) return;
+  for(let i=0;i<26;i++){
+    const s=document.createElement('div');
+    s.className='aurora-star';
+    s.style.top=Math.random()*70+'%';
+    s.style.left=Math.random()*95+'%';
+    const size=1+Math.random()*2;
+    s.style.width=size+'px';
+    s.style.height=size+'px';
+    s.style.animationDelay=(Math.random()*3)+'s';
+    field.appendChild(s);
+  }
+}
+buildAuroraStars();
+
+/* Falling stars drift across the sky on their own, forever — each one carries a little wish moment */
+const wishLines=[
+  '✦ make a wish ✦',
+  'a star just passed — make it count',
+  'quick, before it fades ✦',
+  'wish for something only you know'
+];
+function spawnFallingStar(){
+  const field=document.getElementById('auroraField');
+  if(!field) return;
+  const star=document.createElement('div');
+  star.className='falling-star';
+  const startTop=5+Math.random()*35;
+  const startLeft=Math.random()*60;
+  const dx=200+Math.random()*160;
+  const dy=90+Math.random()*90;
+  star.style.top=startTop+'%';
+  star.style.left=startLeft+'%';
+  star.style.setProperty('--dx',dx+'px');
+  star.style.setProperty('--dy',dy+'px');
+  field.appendChild(star);
+  requestAnimationFrame(()=>star.classList.add('fly'));
+  setTimeout(()=>star.remove(),1500);
+
+  const reveal=document.getElementById('auroraReveal');
+  const text=document.getElementById('auroraRevealText');
+  text.textContent=wishLines[Math.floor(Math.random()*wishLines.length)];
+  reveal.classList.add('show');
+  setTimeout(()=>{ reveal.classList.remove('show'); },3800);
+}
+function scheduleFallingStars(){
+  spawnFallingStar();
+  setTimeout(scheduleFallingStars,12000);
+}
+setTimeout(scheduleFallingStars,2000);
+
+/* Just Ours - bougainvillea wall & pathway */
+const flowerColors=['#E85C9E','#F080B4','#DE4E90','#C23572','#D2477E'];
+/* Small flowers densely covering the wall (top ~78% of scene, above the path) */
+const bougainFlowers=(function(){
+  const list=[];
+  /* Layer 1: dense base grid covering almost the whole wall */
+  const rows=17, cols=19;
+  for(let r=0;r<rows;r++){
+    for(let c=0;c<cols;c++){
+      if(Math.random()<0.1) continue;
+      const top=13+r*3.7+(Math.random()*3-1.5);
+      const left=0.5+c*5.3+(Math.random()*3.5-1.75);
+      if(top>78) continue;
+      list.push({
+        top:Math.max(13,Math.min(78,top)),
+        left:Math.max(0,Math.min(99,left)),
+        size:6+Math.random()*6,
+        rot:Math.random()*360,
+        color:flowerColors[Math.floor(Math.random()*flowerColors.length)]
+      });
+    }
+  }
+  /* Layer 2: extra scattered flowers on top for natural clumping/depth */
+  for(let i=0;i<90;i++){
+    const top=14+Math.random()*62;
+    list.push({
+      top,
+      left:Math.random()*99,
+      size:5+Math.random()*7,
+      rot:Math.random()*360,
+      color:flowerColors[Math.floor(Math.random()*flowerColors.length)]
+    });
+  }
+  return list;
+})();
+/* A few sparse leaves peeking through */
+const bougainLeaves=[
+  {top:24,left:10,rot:-20,size:14},{top:40,left:70,rot:25,size:12},
+  {top:55,left:22,rot:-40,size:13},{top:32,left:52,rot:15,size:11},
+  {top:64,left:80,rot:35,size:13},{top:46,left:38,rot:-15,size:12},
+  {top:70,left:55,rot:50,size:11}
+];
+/* Petals that have fallen onto the pathway below */
+const bougainFallenPetals=(function(){
+  const list=[];
+  for(let i=0;i<26;i++){
+    list.push({
+      top:80+Math.random()*17,
+      left:Math.random()*96,
+      size:5+Math.random()*5,
+      rot:Math.random()*360,
+      color:flowerColors[Math.floor(Math.random()*flowerColors.length)]
+    });
+  }
+  return list;
+})();
+/* A small tree growing against the wall on the right side */
+const bougainTreeSegments=[
+  {bottom:0,left:80,width:16,height:16,rot:2},
+  {bottom:14,left:81,width:14,height:15,rot:-6},
+  {bottom:27,left:79.5,width:13,height:15,rot:6},
+  {bottom:40,left:81,width:11,height:14,rot:-4}
+];
+const bougainTreeBranches=[
+  {bottom:36,left:80,length:32,rot:-155},
+  {bottom:42,left:80.5,length:26,rot:-25},
+  {bottom:50,left:80,length:30,rot:-160},
+  {bottom:52,left:81,length:24,rot:-15},
+  {bottom:60,left:80.5,length:22,rot:-140},
+  {bottom:62,left:81,length:20,rot:-10}
+];
+/* Extra flowers grown specifically along the tree's branches/trunk */
+const bougainTreeFlowers=(function(){
+  const list=[];
+  bougainTreeBranches.forEach(br=>{
+    const rad=br.rot*Math.PI/180;
+    for(let i=0;i<20;i++){
+      const t=0.15+Math.random()*0.85;
+      const bx=br.left+ (Math.cos(rad)*br.length*t)/6.2;
+      const by=(100-br.bottom)- (Math.sin(rad)*br.length*t)/6.2;
+      list.push({
+        top:Math.max(14,Math.min(78,by+(Math.random()*6-3))),
+        left:Math.max(58,Math.min(99,bx+(Math.random()*6-3))),
+        size:5+Math.random()*6,
+        rot:Math.random()*360,
+        color:flowerColors[Math.floor(Math.random()*flowerColors.length)]
+      });
+    }
+  });
+  /* Extra dense blanket directly over the tree's trunk/branch zone so no wood peeks through */
+  for(let i=0;i<90;i++){
+    list.push({
+      top:14+Math.random()*62,
+      left:60+Math.random()*38,
+      size:5+Math.random()*6,
+      rot:Math.random()*360,
+      color:flowerColors[Math.floor(Math.random()*flowerColors.length)]
+    });
+  }
+  return list;
+})();
+function buildBougainScene(){
+  const scene=document.getElementById('bougainScene');
+  if(!scene||scene.querySelector('.bg-flower')) return;
+  bougainTreeSegments.forEach(seg=>{
+    const trunk=document.createElement('div');
+    trunk.className='bg-tree-trunk';
+    trunk.style.bottom=seg.bottom+'%';
+    trunk.style.left=seg.left+'%';
+    trunk.style.width=seg.width+'px';
+    trunk.style.height=seg.height+'%';
+    trunk.style.transform='rotate('+seg.rot+'deg)';
+    scene.appendChild(trunk);
+  });
+  bougainTreeBranches.forEach(br=>{
+    const branch=document.createElement('div');
+    branch.className='bg-tree-branch';
+    branch.style.bottom=br.bottom+'%';
+    branch.style.left=br.left+'%';
+    branch.style.width=br.length+'px';
+    branch.style.height='7px';
+    branch.style.transform='rotate('+br.rot+'deg)';
+    scene.appendChild(branch);
+  });
+  bougainLeaves.forEach((lf,idx)=>{
+    const leaf=document.createElement('div');
+    leaf.className='bg-leaf';
+    leaf.style.top=lf.top+'%';
+    leaf.style.left=lf.left+'%';
+    leaf.style.width=lf.size+'px';
+    leaf.style.height=(lf.size*1.3)+'px';
+    leaf.style.setProperty('--r',lf.rot+'deg');
+    leaf.style.transitionDelay=(idx*0.03)+'s';
+    scene.appendChild(leaf);
+  });
+  const allFlowers=bougainFlowers.concat(bougainTreeFlowers);
+  allFlowers.forEach((f,idx)=>{
+    const el=document.createElement('div');
+    el.className='bg-flower';
+    el.style.top=f.top+'%';
+    el.style.left=f.left+'%';
+    el.style.width=f.size+'px';
+    el.style.height=(f.size*1.25)+'px';
+    el.style.background=f.color;
+    el.style.setProperty('--r',f.rot+'deg');
+    el.style.transitionDelay=(idx*0.01)+'s';
+    el.style.zIndex=2;
+    scene.appendChild(el);
+  });
+  bougainFallenPetals.forEach((p,idx)=>{
+    const el=document.createElement('div');
+    el.className='bg-petal-fallen';
+    el.style.top=p.top+'%';
+    el.style.left=p.left+'%';
+    el.style.width=p.size+'px';
+    el.style.height=(p.size*1.2)+'px';
+    el.style.background=p.color;
+    el.style.setProperty('--r',p.rot+'deg');
+    el.style.transitionDelay=(0.5+idx*0.025)+'s';
+    scene.appendChild(el);
+  });
+}
+buildBougainScene();
+let bougainBloomed=false;
+function spawnFallingPetal(){
+  const scene=document.getElementById('bougainScene');
+  if(!scene) return;
+  const p=document.createElement('div');
+  p.className='falling-petal';
+  const size=5+Math.random()*5;
+  p.style.width=size+'px';
+  p.style.height=(size*1.2)+'px';
+  p.style.left=(Math.random()*94)+'%';
+  p.style.background=flowerColors[Math.floor(Math.random()*flowerColors.length)];
+  p.style.setProperty('--dx',(Math.random()*60-30)+'px');
+  p.style.setProperty('--rr',(360+Math.random()*360)+'deg');
+  const duration=4+Math.random()*3;
+  p.style.animationDuration=duration+'s';
+  scene.appendChild(p);
+  requestAnimationFrame(()=>p.classList.add('drift'));
+  setTimeout(()=>p.remove(),duration*1000+200);
+}
+function scheduleFallingPetals(){
+  spawnFallingPetal();
+  setTimeout(scheduleFallingPetals,1400+Math.random()*1400);
+}
+function bloomBougain(){
+  if(bougainBloomed) return;
+  bougainBloomed=true;
+  document.querySelectorAll('#bougainScene .bg-flower, #bougainScene .bg-leaf, #bougainScene .bg-petal-fallen').forEach(el=>{
+    el.classList.add('bloom');
+  });
+  document.getElementById('bougainHint').textContent='';
+  setTimeout(()=>{
+    document.getElementById('bougainLine').classList.add('show');
+  },1300);
+  setTimeout(()=>{
+    document.getElementById('bougainLine2').classList.add('show');
+  },2600);
+  scheduleFallingPetals();
+}
+
+function spawnConfettiBurst(el){
+  const rect=el.getBoundingClientRect();
+  const e=['🎉','✨','🎊','💛','🌸'];
+  for(let i=0;i<8;i++){
+    const c=document.createElement('div');
+
+    c.className='confetti';
+    c.textContent=e[Math.floor(Math.random()*e.length)];
+    c.style.left=(rect.left+Math.random()*20-10)+'px';
+    c.style.top=(rect.top)+'px';
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),2500);
+  }
+}
+
+</script>
+</body>
+</html>
