@@ -1800,6 +1800,31 @@ body{
       </div>
     </div>
     <div class="mem-add-note reveal"><span>✦ More memories being made every day ✦</span></div>
+    <div class="mem-header" style="margin-top:40px;">
+  <div class="page-label">A Look Back</div>
+  <div class="page-title">Her Last <em>Birthday</em></div>
+  <div class="page-sub">Sealed away, just for today.</div>
+</div>
+<div class="env-cover reveal" id="memVideoLockCover" onclick="openMemVideoLock()">
+  <div class="env-seal">🌹</div>
+  <div class="env-tag">✦ A Memory, Sealed For You ✦</div>
+  <div class="env-hint">tap the seal to watch</div>
+</div>
+<div class="home-video-item" id="memVideoWrap" style="display:none;">
+  <video id="memVideoLast" controls playsinline preload="metadata" src="vid/her last birthday.mp4"></video>
+  <div class="home-video-caption">A little look back — her last birthday 🎂</div>
+</div>
+<div class="lock-modal" id="memVideoLockModal">
+  <div class="lock-box">
+    <div class="lock-icon">🔒</div>
+    <div class="lock-title">This one's just for you</div>
+    <div class="lock-sub">enter the passcode to watch</div>
+    <input type="password" inputmode="numeric" id="memVideoLockInput" class="lock-input" placeholder="• • • •" onkeydown="if(event.key==='Enter')checkMemVideoLock()">
+    <div class="lock-error" id="memVideoLockError">that's not quite it, try again 🌹</div>
+    <button class="lock-btn" onclick="checkMemVideoLock()">Open</button>
+    <div class="lock-close" onclick="closeMemVideoLock()">not right now</div>
+  </div>
+</div>
 
     <div class="mem-header" style="margin-top:40px;">
       <div class="page-label">From my heart</div>
@@ -1955,7 +1980,38 @@ function spawnHearts(){
   }
 }
 /* Letter 1 - wax seal lock */
-const LETTER1_PASSCODE='1225';
+const MEMVIDEO_PASSCODE='2512';
+function openMemVideoLock(){
+  const modal=document.getElementById('memVideoLockModal');
+  const input=document.getElementById('memVideoLockInput');
+  modal.classList.add('show');
+  input.value='';
+  document.getElementById('memVideoLockError').classList.remove('show');
+  setTimeout(()=>input.focus(),300);
+}
+function closeMemVideoLock(){
+  document.getElementById('memVideoLockModal').classList.remove('show');
+}
+function checkMemVideoLock(){
+  const input=document.getElementById('memVideoLockInput');
+  const err=document.getElementById('memVideoLockError');
+  if(input.value.trim()===MEMVIDEO_PASSCODE){
+    closeMemVideoLock();
+    const cover=document.getElementById('memVideoLockCover');
+    const video=document.getElementById('memVideoWrap');
+    cover.style.opacity='0';
+    cover.style.transform='scale(.95)';
+    setTimeout(()=>{
+      cover.style.display='none';
+      video.style.display='block';
+      video.style.animation='letterUnfold .8s ease forwards';
+    },450);
+  } else {
+    input.classList.add('shake');
+    err.classList.add('show');
+    setTimeout(()=>input.classList.remove('shake'),400);
+  }
+}const LETTER1_PASSCODE='1225';
 function openLetterLock(){
   const modal=document.getElementById('letterLockModal');
   const input=document.getElementById('letterLockInput');
