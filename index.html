@@ -1094,6 +1094,16 @@ body{
 </style>
 </head>
 <body>
+  <div id="siteLockOverlay" style="position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;background:var(--maroon-deep,#3D0A0A);padding:20px;">
+  <div style="background:var(--warm-white,#FFFDF8);border-radius:20px;padding:36px 26px;max-width:320px;width:100%;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.4);">
+    <div style="font-size:32px;margin-bottom:10px;">🔒</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--maroon,#5C1A1A);margin-bottom:6px;font-weight:600;">This page is private</div>
+    <div style="font-size:12px;color:#9A7A70;margin-bottom:18px;font-style:italic;">enter the passcode to continue</div>
+    <input type="password" id="siteLockInput" placeholder="• • • • •" style="width:100%;box-sizing:border-box;padding:12px 16px;border-radius:12px;border:1px solid rgba(201,165,90,.35);background:#fff;font-size:16px;text-align:center;letter-spacing:2px;margin-bottom:12px;color:var(--maroon-deep,#3D0A0A);" onkeydown="if(event.key==='Enter')checkSiteLock()">
+    <div id="siteLockError" style="font-size:11px;color:#B03030;margin-bottom:10px;display:none;">that's not it, try again</div>
+    <button onclick="checkSiteLock()" style="width:100%;padding:12px;border-radius:12px;background:var(--maroon,#5C1A1A);color:#fff;font-size:13px;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;">Enter</button>
+  </div>
+  </div>
 
 <div id="app">
   <div class="page active" id="pageHome">
@@ -2044,7 +2054,25 @@ function checkLetterLock(){
     setTimeout(()=>input.classList.remove('shake'),400);
   }
 }
-const pages={home:'pageHome',birthday:'pageBirthday',memories:'pageMemories',letters:'pageLetters',music:'pageMusic',discover:'pageDiscover',almanac:'pageAlmanac',sky:'pageSky',solar:'pageSolar',shows:'pageShows',tarot:'pageTarot',tide:'pageTide',aurora:'pageAurora',bougain:'pageBougain',sealed:'pageSealed',quietmagic:'pageQuietMagic',dreamcity:'pageDreamCity',sweetthings:'pageSweetThings'};
+const SITE_LOCK_ENABLED=true;
+const SITE_PASSCODE='SHEIN';
+if(!SITE_LOCK_ENABLED){
+  document.getElementById('siteLockOverlay').style.display='none';
+}
+else if(localStorage.getItem('siteUnlocked')==='true'){
+  document.getElementById('siteLockOverlay').style.display='none';
+}
+function checkSiteLock(){
+  const input=document.getElementById('siteLockInput');
+  const err=document.getElementById('siteLockError');
+  if(input.value.trim().toUpperCase()===SITE_PASSCODE){
+    localStorage.setItem('siteUnlocked','true');
+    document.getElementById('siteLockOverlay').style.display='none';
+  } else {
+    err.style.display='block';
+    input.value='';
+  }
+      }const pages={home:'pageHome',birthday:'pageBirthday',memories:'pageMemories',letters:'pageLetters',music:'pageMusic',discover:'pageDiscover',almanac:'pageAlmanac',sky:'pageSky',solar:'pageSolar',shows:'pageShows',tarot:'pageTarot',tide:'pageTide',aurora:'pageAurora',bougain:'pageBougain',sealed:'pageSealed',quietmagic:'pageQuietMagic',dreamcity:'pageDreamCity',sweetthings:'pageSweetThings'};
 function switchPage(key){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.btab').forEach(t=>t.classList.remove('active'));
