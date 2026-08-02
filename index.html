@@ -2059,11 +2059,12 @@ body{
         </div>
       </div>
       <div class="song-list">
-        <div class="song-item playing" onclick="selectSong(0)"><div class="song-num">♪</div><div class="song-info"><div class="song-name">Love Story</div><div class="song-art">Indila</div></div><div class="song-dur">4:18</div><div>❤️</div></div>
+        <div class="song-item playing" onclick="selectSong(0)"><div class="song-num">♪</div><div class="song-info"><div class="song-name">Love Story</div><div class="song-art">Indila</div></div><div class="song-dur">4:18</div><div>🩷</div></div>
         <div class="song-item" onclick="selectSong(1)"><div class="song-num">2</div><div class="song-info"><div class="song-name">505</div><div class="song-art">Arctic Monkeys</div></div><div class="song-dur">4:11</div><div>🤍</div></div>
-        <div class="song-item" onclick="selectSong(2)"><div class="song-num">3</div><div class="song-info"><div class="song-name">You're Beautiful Like This Song</div><div class="song-art">Jungkook</div></div><div class="song-dur">4:04</div><div>🤍</div></div>
-        <div class="song-item" onclick="selectSong(3)"><div class="song-num">4</div><div class="song-info"><div class="song-name">Do I Wanna Know?</div><div class="song-art">Arctic Monkeys</div></div><div class="song-dur">4:25</div><div>❤️</div></div>
-        <div class="song-item" onclick="selectSong(4)"><div class="song-num">5</div><div class="song-info"><div class="song-name">I Wanna Be Yours</div><div class="song-art">Arctic Monkeys</div></div><div class="song-dur">3:04</div><div>🤍</div></div>
+        <div class="song-item" onclick="selectSong(2)"><div class="song-num">3</div><div class="song-info"><div class="song-name">You're Beautiful Like This Song</div><div class="song-art">Jungkook</div></div><div class="song-dur">4:04</div><div>🩷</div></div>
+        <div class="song-item" onclick="selectSong(3)"><div class="song-num">4</div><div class="song-info"><div class="song-name">Do I Wanna Know?</div><div class="song-art">Arctic Monkeys</div></div><div class="song-dur">4:25</div><div>🤍</div></div>
+        <div class="song-item" onclick="selectSong(4)"><div class="song-num">5</div><div class="song-info"><div class="song-name">I Wanna Be Yours</div><div class="song-art">Arctic Monkeys</div></div><div class="song-dur">3:04</div><div>🩷</div></div>
+        <div class="song-item" onclick="selectSong(5)"><div class="song-num">6</div><div class="song-info"><div class="song-name">Yeh Fitoor Mera</div><div class="song-art">Arijit Singh</div></div><div class="song-dur">3:32</div><div>🤍</div></div>
       </div>
     </div>
   </div>
@@ -2250,10 +2251,11 @@ window.addEventListener('scroll',triggerReveal);
 triggerReveal();
 const songs=[
   {name:'Love Story',artist:'Indila',emoji:'🌸',dur:'4:18',sec:258,src:'musics/Indila Love Story.mp3'},
-  {name:'505',artist:'Arctic Monkeys',emoji:'🌙',dur:'4:11',sec:251,src:'musics/505.mp3'},
+  {name:'505',artist:'Arctic Monkeys',emoji:'🪷',dur:'4:11',sec:251,src:'musics/505.mp3'},
   {name:'You\'re Beautiful Like This Song',artist:'Jungkook',emoji:'🌼',dur:'4:04',sec:244,src:'musics/still with u.mp3'},
   {name:'Do I Wanna Know?',artist:'Arctic Monkeys',emoji:'💮',dur:'4:25',sec:265,src:'musics/Do I Wanna Know.mp3'},
-  {name:'I Wanna Be Yours',artist:'Arctic Monkeys',emoji:'🏵️',dur:'3:04',sec:184,src:'musics/I Wanna Be Yours.mp3'}
+  {name:'I Wanna Be Yours',artist:'Arctic Monkeys',emoji:'🏵️',dur:'3:04',sec:184,src:'musics/I Wanna Be Yours.mp3'},
+  {name:'Yeh Fitoor Mera',artist:'Arijit Singh',emoji:'🌹',dur:'3:32',sec:212,src:'musics/Yeh Fitoor Mera.mp3'}
 ];
 let curIdx=0,playing=false;
 const audioEl=document.getElementById('audioPlayer');
